@@ -8,8 +8,8 @@ html {
 
 body {
   font-family: 'DM Sans', sans-serif;
-  color: @grey-dark;
-  @media @mobile {
+  color: $grey-dark;
+  @media (max-width: #{$mobile}) {
     margin: 1rem;
   }
 }
@@ -22,11 +22,11 @@ h1 {
   font-size: 4rem;
   line-height: 4.2rem;
   margin-bottom: 2rem;
-  @media @tablet {
+  @media (max-width: #{$tablet}) {
     font-size: 3.4rem;
     line-height: 3.2rem;
   }
-  @media @mobile {
+  @media (max-width: #{$mobile}) {
     font-size: 3rem;
     line-height: 2.8rem;
   }
@@ -36,7 +36,7 @@ h2 {
   font-size: 3rem;
   line-height: 3.2rem;
   margin-bottom: 1.6rem;
-  @media @tablet {
+  @media (max-width: #{$tablet}) {
     font-size: 2.6rem;
     line-height: 2.8rem;
   }
@@ -45,7 +45,7 @@ h2 {
 h3 {
   font-size: 2.4rem;
   line-height: 2.6rem;
-  color: @accent;
+  color: $accent;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
@@ -53,7 +53,7 @@ h3 {
 h4 {
   font-size: 2.2rem;
   line-height: 2.4rem;
-  color: @coral;
+  color: $coral;
 }
 
 h5 {

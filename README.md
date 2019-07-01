@@ -1,3 +1,3 @@
 # landing-page
 
-Less Command `less-watch-compiler less css index.less`
+Sass Command `sass --watch index.scss index.css`
