@@ -283,4 +283,76 @@ nav .nav-content button {
   transition: transform 0.3s;
 }
 
+.pairing-section {
+  padding-top: 10rem;
+}
+.pairing-section .pairing-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2rem 0;
+}
+.pairing-section .pairing-content .pairing-left-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 45%;
+}
+.pairing-section .pairing-content .pairing-left-content h4 {
+  padding: 3rem;
+}
+.pairing-section .pairing-content .pairing-left-content p {
+  padding: 2rem;
+}
+.pairing-section .pairing-content .pairing-left-content h3 {
+  padding: 2rem;
+}
+.pairing-section .pairing-content .pairing-left-content h5 {
+  padding: 1rem;
+}
+.pairing-section .pairing-content .pairing-left-content ul {
+  text-align: left;
+}
+.pairing-section .pairing-content .pairing-left-content ul li {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+.pairing-section .pairing-content .pairing-left-content img {
+  width: 60%;
+}
+.pairing-section .pairing-content .pairing-right-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 3rem;
+  width: 45%;
+}
+.pairing-section .pairing-content .pairing-right-content img {
+  margin: 3rem;
+  width: 60%;
+}
+.pairing-section .pairing-content .pairing-right-content h4 {
+  padding: 2rem;
+}
+.pairing-section .pairing-content .pairing-right-content ul li {
+  text-align: left;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  list-style-type: disc;
+}
+
+.why-pair-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.why-pair-section .why-content img {
+  width: 30%;
+}
+
 /*# sourceMappingURL=style.css.map */
