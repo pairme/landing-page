@@ -78,7 +78,6 @@ h1 {
 h2 {
   font-size: 3rem;
   line-height: 3.2rem;
-  margin-bottom: 1.6rem;
 }
 
 h3 {
@@ -219,6 +218,9 @@ nav .nav-content button {
   align-items: center;
   flex-direction: column;
   min-height: 90vh;
+}
+.cta-section h1 {
+  margin: 2rem 0;
 }
 .cta-section .cta-content {
   display: flex;
@@ -378,10 +380,14 @@ nav .nav-content button {
   line-height: 2.2rem;
 }
 
+.team-section h4 {
+  text-align: center;
+}
 .team-section .team-content {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  margin: 2rem;
 }
 .team-section .team-content .card {
   display: flex;
@@ -390,6 +396,9 @@ nav .nav-content button {
   flex-direction: column;
   box-shadow: 0 0 4px 2px rgba(151, 149, 184, 0.2);
   padding: 1rem;
+  margin: 2rem;
+  height: 40%;
+  width: 50%;
   text-align: center;
 }
 .team-section .team-content .card .img-name-container img {
@@ -399,6 +408,30 @@ nav .nav-content button {
 }
 .team-section .team-content .card .img-name-container .team-title h2 {
   text-transform: uppercase;
+}
+.team-section .team-content .card .img-name-container .team-title h3 {
+  margin-bottom: 1rem;
+}
+.team-section .team-content .card p {
+  padding: 0 1rem;
+}
+.team-section .team-content .card .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  padding: 1rem 5rem;
+}
+.team-section .team-content .card .social i {
+  margin: 20%;
+  cursor: pointer;
+}
+
+footer p {
+  height: 10vh;
+  background-color: #FD806A;
+  text-align: center;
+  padding: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
