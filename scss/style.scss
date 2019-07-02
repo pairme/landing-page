@@ -1,7 +1,7 @@
 @import 'variables';
 @import 'mixins';
 @import 'reset';
-@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -24,68 +24,59 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 4.2rem;
+  @include font(4rem, 4.2rem);
+  // font-weight: 700;
   margin-bottom: 2rem;
   @media (max-width: #{$tablet}) {
-    font-size: 3.4rem;
-    line-height: 3.2rem;
+    @include font(3.4rem, 3.4rem);
   }
   @media (max-width: #{$mobile}) {
-    font-size: 3rem;
-    line-height: 2.8rem;
+    @include font(3rem, 3rem);
   }
 }
 
 h2 {
-  font-size: 3rem;
-  line-height: 3.2rem;
+  @include font(3rem, 3.2rem);
   margin-bottom: 1.6rem;
+  // font-weight: 400;
   @media (max-width: #{$tablet}) {
-    font-size: 2.6rem;
-    line-height: 2.8rem;
+    @include font(2.6rem, 2.8rem);
   }
 }
 
 h3 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  line-height: 2.6rem;
+  @include font(2.4rem, 2.6rem);
+  // font-weight: 700;
   color: $accent;
   margin-bottom: 1rem;
 }
 
 h4 {
-  font-size: 2.2rem;
-  line-height: 2.4rem;
+  @include font(2.2rem, 2.4rem);
+  font-weight: 700;
   text-transform: uppercase;
   color: $coral;
 }
 
 h5 {
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 2.2rem;
+  @include font(2rem, 2.2rem);
+  // font-weight: 700;
 }
 
 h6 {
-  font-size: 1.8rem;
-  line-height: 2.2rem;
+  @include font(1.8rem, 2.2rem);
+  // font-weight: 700;
 }
 
 a {
+  @include font(1.4rem, 2rem);
   font-family: 'Quicksand', sans-serif;
-  font-size: 1.4rem;
-  line-height: 2rem;
-  text-decoration: none;
-  text-transform: uppercase;
   cursor: pointer;
 }
 
 p {
-  font-size: 1.6rem;
-  line-height: 2rem;
+  @include font(1.6rem, 2rem);
+  // font-weight: 400;
 }
 
 img {
@@ -93,14 +84,19 @@ img {
   height: auto;
 }
 
+button {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background: $accent;
+}
+
 .container {
-  display: flex;
+  @include flex(center, center);
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+  background-color: $white;
 }
 
 
@@ -109,40 +105,92 @@ img {
 
 
 
-// nav {
-//   .displayFlex(space-between, center);
-//   flex-wrap: wrap;
-//   background-color: rgb(19,18,30);
-//   ul {
-//     .displayFlex(space-between, flex-start);
-//     width: 75%;
-//     margin-right: 1rem;
-//     li a {
-//       .font(1.4rem,1.4rem);
-//       margin-right: 1.5rem;
-//       text-decoration: none;
-//       color: white;
-//     }
-//   }
-// }
+nav {
+  @include flex(space-between, center);
+  background-color: $white;
+  box-shadow: 0 7px 7px -2px rgb($grey, .2);
+  position: sticky;
+  top: 0%;
+  a {
+    img {
+      margin: 2rem;
+    }
+  }
+  ul {
+    @include flex(space-evenly, center);
+    // border : 1px solid red;
+    width: 60%;
+    li {
+      // font-weight: 700;
+      // border: 1px solid green;
+      a {
+        @include font(1.6rem,1.6rem);
+        padding: 0 1rem;
+        text-decoration: none;
+        color: $coral;
+      }
+      .cta {
+        @include font(1.6rem,1.6rem);
+        align-self: flex-end;
+        font-weight: 700;
+        text-decoration: none;
+        color: $main;
+        box-shadow: 0 2px 2px 2px rgb($grey, .2);
+      }
+    }
+  }
+}
 
-// @media(max-width: 800px) {
-//   nav {
-//     flex-direction: column;
-//     ul {
-//       width: 80%;
-//       height: 5rem;
-//       .displayFlex(center, flex-start);
-//       flex-wrap: wrap;
-//     }
-//   }
-// }
+@media(max-width: $tablet) {
+  nav {
+    flex-direction: column;
+    a {
+      img {
+        width: 60%;
+        margin: 1rem;
+      }
+    }
+    ul {
+      @include flex(center, center);
+      flex-wrap: wrap;
+      width: 100%;
+      padding-bottom: 1rem;
+      li {
+        a {
+          // border : 1px solid blue;
+        }
+      }
+    }
+  }
+}
 
-// @media(max-width: 500px) {
-//   nav {
-//     ul {
-//       width: 90%;
-//       height: 9rem;
-//     }
-//   }
-// }
+@media(max-width: $mobile) {
+  nav {
+    a {
+      img {
+        margin: 1rem;
+      }
+    }
+    ul {
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+.cta-section {
+  @include flex(center, center);
+  flex-direction: column;
+  height: 100%;
+  .cta-content {
+    @include flex(center, center);
+    .cta-left-content {
+      @include flex(center, center);
+      flex-direction: column;
+
+      p {
+        @include flex(center, center);
+
+      }
+    }
+  }
+}

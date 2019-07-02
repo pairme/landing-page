@@ -1,12 +1,12 @@
-@mixin displayFlex($j, $a) {
+@mixin flex($j, $a) {
   display: flex;
   justify-content: $j;
   align-items: $a;
 }
 
 @mixin font($size, $lh) {
-  font-family: 'Lato', sans-serif;
-  color: $grey-dark;
+  font-family: 'Quicksand', sans-serif;
+  color: $main;
   font-size: $size;
   line-height: $lh;
 }

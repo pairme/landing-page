@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,55 +8,168 @@
   <title>PairMe | Pair Programming Matchmaker </title>
   <link rel="shortcut icon" href="./assets/pairme-favicon.png" />
   <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <!--NAVBAR-->
+  <nav>
+    <a href='/index.html'>
+      <img src="/assets/pairme-logo.png" alt="pairme logo" />
+    </a>
+    <ul>
+      <li><a href="#pairing-section">HOW IT WORKS</a></li>
+      <li><a href="#why-pair-section">WHY PAIR</a></li>
+      <li><a href="#team">TEAM</a></li>
+      <!-- <li><a href="#contact">CONTACT</a></li> -->
+      <li><button class='cta'>FIND A PAIR</button></li>
+    </ul>
+  </nav>
 
-<nav>
-  <a href='/index.html'>
-    <img src="/assets/pairme-logo.png" alt="pairme logo" />
-  </a>
-  <ul>
-    <h4><a href="#pairing-section">HOW IT WORKS</a></h4>
-    <h4><a href="#why-pair-section">WHY PAIR</a></h4>
-    <h4><a href="#team">TEAM</a></h4>
-    <h4><a href="#contact">CONTACT</a></h4>
-    <h4><a href="">FIND A PAIR</a></h4>
-  </ul>
-</nav>
+  <!--CONTAINER-->
+  <div class="container">
 
-  <section class="about-section" >
-    <div class="about-content">
+    <!--ABOUT-->
+    <section class="cta-section">
+      <div class="cta-content">
+        <div class="cta-left-content">
+          <p>PairMe allows you to chat and generate a pair programming session over a zoom video conference via
+            matchmaking queue system.</p>
+          <p>Our mission is to help programmers connect and collaborate from anywhere with an internet connection.</p>
+          <button>start pairing now</button>
+          <p>Zoom account required*</p>
+          <p>Don't have Zoom?<br>Sign up for a free account<a>here</a></p>
+        </div>
+        <div class="cta-right-content">
+          <img src="./assets/macbook-laptop.png" alt="laptop">
+        </div>
+      </div>
+      <h3>Learn more about pair programming</h3>
+      <div clas="jump-down">^</div>
+  </section>
+
+  <!--PAIRING-->
+  <section class="pairing-section">
+    <div class="pairing-left-content">
+      <h4>What is pair programming?</h4>
+      <p>Pair programming is a method of having two programmers work on the same piece of code together at the same. One
+        developer acts as a 'driver' typing out the code while the other acts as a 'navigator' directing the high level
+        direction or approach.</p>
+      <h3>Pairing is more about communication, learning, and working towards a common goal.</h3>
+      <h5>Define a list of guidelines before pairing:</h5>
+      <ul>
+        <li>What is the goal or purpose?</li>
+        <li>What are the suggested tools and techniques?</li>
+        <li>How and when to switch roles?</li>
+      </ul>
+      <img src="./assets/map.svg" alt="map">
+    </div>
+
+    <div class="pairing-right-content">
+      <img src="./assets/fast_car_p4cu.svg" alt="car">
+      <h4>How to be a good pair</h4>
+      <ul>
+        <li>Switch every 5-15 minutes or good stopping point</li>
+        <li>Be flexible when choosing tools to use</li>
+        <li>Ask yourself, "is my pair engaged?" or "Am I engaged?"
+        <li>Think out loud and ask if you aren't sure</li>
+        <li>Don't blame or make assumptions</li>
+        <li>Be encouraging and recognize successes</li>
+      </ul>
+    </div>
+    
+  </section>
+
+  <!--WHY PAIR-->
+  <section class="why-pair-section">
+    <div class="why-content">
+      <img src="./assets/connected_world_wuay.svg" alt="world">
+      <p>Get exposed to someone else's code</p>
+      <img src="./assets/bug_fixing_oc7a.svg" alt="computer">
+      <p>Prevent bugs and write better code</p>
+      <img src="./assets/developer-woman.svg" alt="woman">
+      <p>Learn new techniques and tools</p>
+      <img src="./assets/software_engineer_lvl5.svg" alt="engineer">
+      <p>Get more done</p>
+      <img src="./assets/tree_swing_ub4f.svg" alt="tree">
+      <p>Learn about your pair as a person or teammate</p>
+      <img src="./assets/high_five_u364.svg" alt="high-five">
+      <p>Leave feeling happy and accomplished</p>
+    </div>
+  </section>
+
+  <!--TEAM-->
+  <section class="team-section">
+    <div class='team-content'>
+
+      <div class="team-title">
+        <h1 class='team-title'>Meet Our Team</h1>
+      </div>
+
+      <div class='card'>
+        <div class='card-content'>
+          <div class='img-name-container'>
+            <img src="./assets/kristin.png" alt="kristin">
+            <div class="team-title">
+              <h2>Kristin Barr</h2>
+              <h3>Software Developer</h3>
+            </div>
+          </div>
+          <p>I’m a web developer with an interest in visual design. I’m also a podcast and meetup junkie,
+            enjoy biking, photography, and sewing. I love learning and meeting new people. Ask me about
+            what I’m working on!</p>
+        </div>
+      </div>
+
+      <div class='team-cards'>
+        <div class='card'>
+          <div class='card-content'>
+            <div class='img-name-container'>
+              <img src="./assets/carlo.png" alt="carlos">
+              <div class="team-title">
+                <h2>Carlo Clamucha</h2>
+                <h3>Software Developer</h3>
+              </div>
+            </div>
+            <p>Carlo is awesome. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt officia deserunt
+              maiores soluta corrupti, expedita tempora quos enim ex, error illum consequatur, maxime excepturi
+              obcaecati!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class='team-cards'>
+        <div class='card'>
+          <div class='card-content'>
+            <div class='img-name-container'>
+              <img src="./assets/brad.png" alt="carlos">
+              <div class="team-title">
+                <h2>Brad Mortensen</h2>
+                <h3>Software Developer</h3>
+              </div>
+            </div>
+            <p>Carlo is awesome. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt officia deserunt
+              maiores soluta corrupti, expedita tempora quos enim ex, error illum consequatur, maxime excepturi
+              obcaecati!</p>
+          </div>
+        </div>
+      </div>
 
     </div>
-    <div class="app-screenshot">
-      <img src="./assets/macbook-laptop.png" alt="laptop">
+
+  </section>
+
+  </div>
+  <!-- container -->
+  <footer>
+    <div class="footer-content">
+      <p>Copyright 2019</p>
     </div>
-    <h3>Learn more about pair programming</h3>
-  </div>
-</section>
+  </footer>
 
-<section class="pairing-section">
-  <div class="pairing-content">
-    <h4>What is pair programming?</h4>
-    <h4>How to be a good pair</h4>
-  </div>
-</section>
+  <p style="height: 50vh;">.</p>
 
-<section class="why-pair-section">
-
-</section>
-
-<section class="">
-
-</section>
-
-
-<footer>
-
-</footer>
-
-
-<h1>testing H1</h1>
+  <h1>testing H1</h1>
   <h2>testing H2</h2>
   <h3>testing H3</h3>
   <h4>testing H4</h4>
@@ -64,4 +178,5 @@
   <p>testing p</p>
   <a>testing A</a>
 </body>
+
 </html>
