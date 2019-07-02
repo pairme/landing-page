@@ -1,5 +1,12 @@
-@mixin google-font($family) {
-  @import url("http://fonts.googleapis.com/css?family=#{$family}");
+@mixin displayFlex($j, $a) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
 }
 
-@include google-font("DM Sans");
+@mixin font($size, $lh) {
+  font-family: 'Lato', sans-serif;
+  color: $grey-dark;
+  font-size: $size;
+  line-height: $lh;
+}
