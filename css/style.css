@@ -224,7 +224,7 @@ nav .nav-content button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3rem;
+  margin: 4rem;
 }
 .cta-section .cta-content .cta-left-content {
   display: flex;
@@ -291,7 +291,8 @@ nav .nav-content button {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 2rem 0;
+  box-shadow: 0 0 6px 2px rgba(151, 149, 184, 0.1);
+  margin: 4rem;
 }
 .pairing-section .pairing-content .pairing-left-content {
   display: flex;
@@ -302,13 +303,13 @@ nav .nav-content button {
   width: 45%;
 }
 .pairing-section .pairing-content .pairing-left-content h4 {
-  padding: 3rem;
+  padding: 6rem 0 3rem 0;
 }
 .pairing-section .pairing-content .pairing-left-content p {
-  padding: 2rem;
+  padding: 1rem 0 2rem 0;
 }
 .pairing-section .pairing-content .pairing-left-content h3 {
-  padding: 2rem;
+  padding: 2rem 0;
 }
 .pairing-section .pairing-content .pairing-left-content h5 {
   padding: 1rem;
@@ -337,12 +338,12 @@ nav .nav-content button {
   width: 60%;
 }
 .pairing-section .pairing-content .pairing-right-content h4 {
-  padding: 2rem;
+  padding: 6rem;
 }
 .pairing-section .pairing-content .pairing-right-content ul li {
   text-align: left;
   font-size: 1.8rem;
-  line-height: 3rem;
+  line-height: 3.4rem;
   list-style-type: disc;
 }
 
@@ -350,9 +351,27 @@ nav .nav-content button {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  padding: 4rem;
+}
+.why-pair-section h4 {
+  padding: 2rem 1rem;
+}
+.why-pair-section .why-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .why-pair-section .why-content img {
-  width: 30%;
+  padding: 1.2rem;
+  margin: 1.4rem;
+  width: 20%;
+}
+.why-pair-section .why-content p {
+  width: 20rem;
+  padding: 1rem;
+  margin: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

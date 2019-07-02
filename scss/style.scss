@@ -166,9 +166,6 @@ nav {
       width: 100%;
       padding-bottom: 1rem;
       li {
-        a {
-          // border : 1px solid blue;
-        }
         button {
           padding: .5rem 1rem;
           align-self: flex-end;
@@ -198,7 +195,7 @@ nav {
 
   .cta-content {
     @include flex(center, center);
-    margin: 3rem;
+    margin: 4rem;
 
     .cta-left-content {
       @include flex(center, center);
@@ -270,22 +267,23 @@ nav {
     @include flex(center, center);
     // border: 1px solid blue;
     text-align: center;
-    margin: 2rem 0;
-
+    box-shadow: 0 0 6px 2px rgb($grey, .1);
+    margin: 4rem;
     .pairing-left-content {
       @include flex(center, center);
       flex-direction: column;
       flex-wrap: wrap;
       width: 45%;
       // border: 1px solid pink;
+
       h4 {
-        padding: 3rem;
+        padding: 6rem 0 3rem 0;
       }
       p {
-        padding: 2rem;
+        padding: 1rem 0 2rem 0;
       }
       h3 {
-        padding: 2rem;
+        padding: 2rem 0;
       }
       h5 {
         padding: 1rem;
@@ -308,18 +306,19 @@ nav {
       // border: 1px solid pink;
       margin-left: 3rem;
       width: 45%;
+
       img {
         margin: 3rem;
         width: 60%;
       }
       h4 {
-        padding: 2rem;
+        padding: 6rem;
       }
       ul {
         li {
           text-align: left;
           font-size: 1.8rem;
-          line-height: 3rem;
+          line-height: 3.4rem;
           list-style-type: disc;
         }
       }
@@ -330,12 +329,28 @@ nav {
 
 .why-pair-section {
   @include flex(center, center);
+  flex-direction: column;
+  // border: 1px solid red;
+  padding: 4rem;
+  h4 {
+    padding: 2rem 1rem;
+  }
   .why-content {
+    @include flex(center, center);
+    flex-wrap: wrap;
+    // border: 1px solid skyblue;
     img {
-      width: 30%;
+      padding: 1.2rem;
+      margin: 1.4rem;
+      width: 20%;
+      // border: 1px solid pink;
     }
     p {
-
+      width: 20rem;
+      padding: 1rem;
+      margin: 1rem;
+      // border: 1px solid pink;
     }
   }
 }
+
