@@ -198,7 +198,7 @@ nav {
   .cta-content {
     @include flex(center, center);
     margin: 4rem;
-    
+
     .cta-left-content {
       @include flex(center, center);
       flex-direction: column;
@@ -267,7 +267,7 @@ nav {
 
   .pairing-content {
     @include flex(center, center);
-    // border: 1px solid blue;
+    border: 1px solid blue;
     text-align: center;
     box-shadow: 0 0 6px 2px rgb($grey, .1);
     margin: 4rem;
@@ -276,7 +276,7 @@ nav {
       flex-direction: column;
       flex-wrap: wrap;
       width: 45%;
-      // border: 1px solid pink;
+      border: 1px solid pink;
 
       h4 {
         padding: 6rem 0 3rem 0;
@@ -293,6 +293,7 @@ nav {
       ul {
         text-align: left;
         li {
+          margin-left: 2rem;
           font-size: 1.6rem;
           line-height: 2.4rem;
         }
@@ -305,7 +306,7 @@ nav {
       @include flex(center, center);
       flex-direction: column;
       flex-wrap: wrap;
-      // border: 1px solid pink;
+      border: 1px solid pink;
       margin-left: 3rem;
       width: 45%;
 
@@ -334,8 +335,10 @@ nav {
   flex-direction: column;
   padding-top: 10rem;
   .why-content {
+    @include flex(center, center);
+    flex-direction: column;
     padding: 2rem 1rem 4rem 1rem;
-    // border: 1px solid teal;
+
     h4 {
       padding: 2rem 1rem;
     }
@@ -363,6 +366,7 @@ nav {
 }
 
 .team-section {
+  padding-top: 10rem;
   h4 {
     text-align: center;
   }
@@ -371,7 +375,7 @@ nav {
     margin: 2rem;
 
     .card {
-      @include flex(center, center);
+      @include flex(space-between, center);
       flex-direction: column;
       box-shadow: 0 0 4px 2px rgb($grey, .2);
       padding: 1rem;
@@ -416,10 +420,12 @@ nav {
 
 
 footer {
+  @include flex(center, center);
   p {
-    height: 10vh;
-    background-color: $coral;
     text-align: center;
     padding: 3rem;
+    height: 10vh;
+    width: 100%;
+    background-color: $coral;
   }
 }

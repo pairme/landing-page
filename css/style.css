@@ -292,6 +292,7 @@ nav .nav-content button {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid blue;
   text-align: center;
   box-shadow: 0 0 6px 2px rgba(151, 149, 184, 0.1);
   margin: 4rem;
@@ -303,6 +304,7 @@ nav .nav-content button {
   flex-direction: column;
   flex-wrap: wrap;
   width: 45%;
+  border: 1px solid pink;
 }
 .pairing-section .pairing-content .pairing-left-content h4 {
   padding: 6rem 0 3rem 0;
@@ -320,6 +322,7 @@ nav .nav-content button {
   text-align: left;
 }
 .pairing-section .pairing-content .pairing-left-content ul li {
+  margin-left: 2rem;
   font-size: 1.6rem;
   line-height: 2.4rem;
 }
@@ -332,6 +335,7 @@ nav .nav-content button {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
+  border: 1px solid pink;
   margin-left: 3rem;
   width: 45%;
 }
@@ -357,6 +361,10 @@ nav .nav-content button {
   padding-top: 10rem;
 }
 .why-pair-section .why-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 2rem 1rem 4rem 1rem;
 }
 .why-pair-section .why-content h4 {
@@ -380,6 +388,9 @@ nav .nav-content button {
   line-height: 2.2rem;
 }
 
+.team-section {
+  padding-top: 10rem;
+}
 .team-section h4 {
   text-align: center;
 }
@@ -391,7 +402,7 @@ nav .nav-content button {
 }
 .team-section .team-content .card {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   box-shadow: 0 0 4px 2px rgba(151, 149, 184, 0.2);
@@ -427,11 +438,17 @@ nav .nav-content button {
   cursor: pointer;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 footer p {
-  height: 10vh;
-  background-color: #FD806A;
   text-align: center;
   padding: 3rem;
+  height: 10vh;
+  width: 100%;
+  background-color: #FD806A;
 }
 
 /*# sourceMappingURL=style.css.map */
