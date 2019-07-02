@@ -54,6 +54,7 @@ table {
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -214,10 +215,10 @@ nav .nav-content button {
 }
 .cta-section {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 90vh;
 }
 .cta-section .cta-content {
   display: flex;
@@ -230,9 +231,11 @@ nav .nav-content button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 2rem;
 }
-.cta-section .cta-content .cta-left-content .cta-left-top-content p {
+.cta-section .cta-content .cta-left-content .cta-left-top-content {
+  padding: 4rem 2rem 2rem 2rem;
+}
+.cta-section .cta-content .cta-left-content .cta-left-top-content h5 {
   padding: 1rem;
   text-align: center;
 }
@@ -240,21 +243,44 @@ nav .nav-content button {
   font-size: 1.6rem;
   text-transform: uppercase;
   padding: 1.8rem 3rem;
-  margin: 2rem;
+  margin: 2rem 0 1rem 0;
   box-shadow: 0 2px 2px 2px rgba(151, 149, 184, 0.2);
 }
-.cta-section .cta-content .cta-left-content .cta-right-top-content p {
+.cta-section .cta-content .cta-left-content .cta-left-bottom-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+.cta-section .cta-content .cta-left-content .cta-left-bottom-content p {
   padding: 1rem;
   text-align: center;
 }
-.cta-section h3 {
+.cta-section .cta-content .cta-left-content .cta-left-bottom-content p a {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #37346e;
+}
+.cta-section .cta-content .cta-right-content img {
+  width: 100%;
+}
+.cta-section .cta-learn-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cta-section .cta-learn-more h3 {
   padding: 1rem;
   font-weight: 700;
 }
-.cta-section .jump-down i {
+.cta-section .cta-learn-more .jump-down i {
   font-size: 3rem;
   color: #9795b8;
   cursor: pointer;
+  margin-bottom: 2rem;
+  transition: transform 0.3s;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -5,6 +5,7 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -191,25 +192,23 @@ nav {
 }
 
 .cta-section {
-  @include flex(center, center);
+  @include flex(space-between, center);
   flex-direction: column;
-  height: 100vh;
-  // border: 1px solid red;
+  min-height: 90vh;
+
   .cta-content {
     @include flex(center, center);
-    // padding: 1rem 2rem;
-    // border: 1px solid blue;
     margin: 3rem;
+
     .cta-left-content {
       @include flex(center, center);
       flex-direction: column;
-      padding: 2rem;
-      // border: 1px solid green;
+
       .cta-left-top-content {
-        p {
-          // @include flex(center, center);
+        padding: 4rem 2rem 2rem 2rem;
+
+        h5 {
           padding: 1rem;
-          // border: 1px solid pink;
           text-align: center;
         }
       }
@@ -217,37 +216,50 @@ nav {
         font-size: 1.6rem;
         text-transform: uppercase;
         padding: 1.8rem 3rem;
-        margin: 2rem;
+        margin: 2rem 0 1rem 0;
         box-shadow: 0 2px 2px 2px rgb($grey, .2);
       }
-      .cta-right-top-content {
+      .cta-left-bottom-content {
+        @include flex(center, center);
+        flex-direction: column;
+        margin-bottom: 4rem;
+
         p {
-          // @include flex(center, center);
           padding: 1rem;
-          // border: 1px solid pink;
           text-align: center;
+          a {
+            font-size: 1.6rem;
+            line-height: 2rem;
+            color: $main;
+          }
         }
       }
     }
     .cta-right-content {
       img {
-        // border: 1px solid green;
+        width: 100%;
       }
     }
   }
-  h3 {
-    // border: 1px solid green;
-    padding: 1rem;
-    font-weight: 700;
-  }
-  .jump-down {
-    i {
-      // width: 250%;
-      // transform: scale(2);
-      // width: 200px;
-      font-size: 3rem;
-      color: $grey;
-      cursor: pointer;
+  .cta-learn-more {
+    @include flex(center, center);
+    flex-direction: column;
+    h3 {
+      padding: 1rem;
+      font-weight: 700;
+    }
+    .jump-down {
+      i {
+        font-size: 3rem;
+        color: $grey;
+        cursor: pointer;
+        margin-bottom: 2rem;
+        transition: transform .3s;
+
+      }
     }
   }
 }
+
+
+// .pairing-section
