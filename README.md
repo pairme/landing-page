@@ -1,3 +1,3 @@
 # landing-page
 
-Sass Command `sass --watch index.scss index.css`
+Sass Command `sass --watch scss:css`

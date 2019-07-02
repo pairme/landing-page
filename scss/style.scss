@@ -14,9 +14,6 @@ html {
 body {
   font-family: 'Quicksand', sans-serif;
   color: $navy;
-  @media (max-width: #{$mobile}) {
-    margin: 1rem;
-  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -24,59 +21,57 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  @include font(4rem, 4.2rem);
-  // font-weight: 700;
-  margin-bottom: 2rem;
-  @media (max-width: #{$tablet}) {
-    @include font(3.4rem, 3.4rem);
-  }
-  @media (max-width: #{$mobile}) {
-    @include font(3rem, 3rem);
-  }
+  // @include font(4rem, 4.2rem);
+  font-size: 4rem;
+  line-height: 4.2rem;
+
 }
 
 h2 {
-  @include font(3rem, 3.2rem);
+  // @include font(3rem, 3.2rem);
+  font-size: 3rem;
+  line-height: 3.2rem;
   margin-bottom: 1.6rem;
-  // font-weight: 400;
-  @media (max-width: #{$tablet}) {
-    @include font(2.6rem, 2.8rem);
-  }
 }
 
 h3 {
-  @include font(2.4rem, 2.6rem);
-  // font-weight: 700;
+  // @include font(2.4rem, 2.6rem);
+  font-size: 2.4rem;
+  line-height: 2.6rem;
   color: $accent;
   margin-bottom: 1rem;
 }
 
 h4 {
-  @include font(2.2rem, 2.4rem);
-  font-weight: 700;
+  // @include font(2.2rem, 2.4rem);
+  font-size: 2.2rem;
+  line-height: 2.4rem;
   text-transform: uppercase;
   color: $coral;
 }
 
 h5 {
-  @include font(2rem, 2.2rem);
-  // font-weight: 700;
+  // @include font(2rem, 2.2rem);
+  font-size: 2rem;
+  line-height: 2.2rem;
 }
 
 h6 {
-  @include font(1.8rem, 2.2rem);
-  // font-weight: 700;
+  // @include font(1.8rem, 2.2rem);
+  font-size: 1.8rem;
+  line-height: 2.2rem;
 }
 
 a {
-  @include font(1.4rem, 2rem);
+  font-size: 1.4rem;
+  line-height: 2rem;
   font-family: 'Quicksand', sans-serif;
   cursor: pointer;
 }
 
 p {
-  @include font(1.6rem, 2rem);
-  // font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
 }
 
 img {
@@ -85,8 +80,10 @@ img {
 }
 
 button {
-  padding: 1rem 2rem;
+  padding: 1rem 1.6rem;
   border-radius: 1rem;
+  color: $main;
+  font-weight: 700;
   background: $accent;
 }
 
@@ -106,43 +103,55 @@ button {
 
 
 nav {
-  @include flex(space-between, center);
+  display: block;
   background-color: $white;
   box-shadow: 0 7px 7px -2px rgb($grey, .2);
   position: sticky;
   top: 0%;
-  a {
-    img {
-      margin: 2rem;
+
+  .nav-content {
+    @include flex(space-between, center);
+    max-width: 1440px;
+    // border : 1px solid pink;
+    a {
+      img {
+        margin: 2rem;
+        // border: 1px solid green;
+      }
     }
-  }
-  ul {
-    @include flex(space-evenly, center);
-    // border : 1px solid red;
-    width: 60%;
-    li {
-      // font-weight: 700;
-      // border: 1px solid green;
-      a {
-        @include font(1.6rem,1.6rem);
-        padding: 0 1rem;
-        text-decoration: none;
-        color: $coral;
-      }
-      .cta {
-        @include font(1.6rem,1.6rem);
-        align-self: flex-end;
+    ul {
+      @include flex(flex-end, center);
+      width: 60%;
+      // border : 1px solid red;
+      li {
         font-weight: 700;
-        text-decoration: none;
-        color: $main;
-        box-shadow: 0 2px 2px 2px rgb($grey, .2);
+        align-self: flex-end;
+        // border: 1px solid green;
+        // padding: 0 1.5rem;
+        margin: 0 3%;
+        a {
+          // @include font(1.6rem,1.6rem);
+          font-size: 1.6rem;
+          font-weight: 700;
+          text-decoration: none;
+          color: $coral;
+          // background-color: pink;
+
+        }
       }
+    }
+    button {
+      margin-right: 1.6rem;
+      font-size: 1.4rem;
+      line-height: 1.4rem;
+      box-shadow: 0 2px 2px 2px rgb($grey, .2);
     }
   }
 }
 
 @media(max-width: $tablet) {
   nav {
+    @include flex(flex-start, center);
     flex-direction: column;
     a {
       img {
@@ -158,6 +167,10 @@ nav {
       li {
         a {
           // border : 1px solid blue;
+        }
+        button {
+          padding: .5rem 1rem;
+          align-self: flex-end;
         }
       }
     }
@@ -180,17 +193,61 @@ nav {
 .cta-section {
   @include flex(center, center);
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
+  // border: 1px solid red;
   .cta-content {
     @include flex(center, center);
+    // padding: 1rem 2rem;
+    // border: 1px solid blue;
+    margin: 3rem;
     .cta-left-content {
       @include flex(center, center);
       flex-direction: column;
-
-      p {
-        @include flex(center, center);
-
+      padding: 2rem;
+      // border: 1px solid green;
+      .cta-left-top-content {
+        p {
+          // @include flex(center, center);
+          padding: 1rem;
+          // border: 1px solid pink;
+          text-align: center;
+        }
       }
+      button {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        padding: 1.8rem 3rem;
+        margin: 2rem;
+        box-shadow: 0 2px 2px 2px rgb($grey, .2);
+      }
+      .cta-right-top-content {
+        p {
+          // @include flex(center, center);
+          padding: 1rem;
+          // border: 1px solid pink;
+          text-align: center;
+        }
+      }
+    }
+    .cta-right-content {
+      img {
+        // border: 1px solid green;
+      }
+    }
+  }
+  h3 {
+    // border: 1px solid green;
+    padding: 1rem;
+    font-weight: 700;
+  }
+  .jump-down {
+    i {
+      // width: 250%;
+      // transform: scale(2);
+      // width: 200px;
+      font-size: 3rem;
+      color: $grey;
+      cursor: pointer;
     }
   }
 }
