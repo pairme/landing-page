@@ -369,7 +369,7 @@ nav {
     .card {
       @include flex(center, center);
       flex-direction: column;
-      // border: 1px solid red;
+      box-shadow: 0 0 4px 2px rgb($grey, .2);
       padding: 1rem;
       text-align: center;
 
