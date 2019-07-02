@@ -127,6 +127,12 @@ button {
   color: #37346e;
   font-weight: 700;
   background: #b6eb1a;
+  border: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -247,6 +253,7 @@ nav .nav-content button {
   padding: 1.8rem 3rem;
   margin: 2rem 0 1rem 0;
   box-shadow: 0 2px 2px 2px rgba(151, 149, 184, 0.2);
+  border: none;
 }
 .cta-section .cta-content .cta-left-content .cta-left-bottom-content {
   display: flex;
@@ -292,7 +299,6 @@ nav .nav-content button {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid blue;
   text-align: center;
   box-shadow: 0 0 6px 2px rgba(151, 149, 184, 0.1);
   margin: 4rem;
@@ -304,7 +310,6 @@ nav .nav-content button {
   flex-direction: column;
   flex-wrap: wrap;
   width: 45%;
-  border: 1px solid pink;
 }
 .pairing-section .pairing-content .pairing-left-content h4 {
   padding: 6rem 0 3rem 0;
@@ -315,17 +320,6 @@ nav .nav-content button {
 .pairing-section .pairing-content .pairing-left-content h3 {
   padding: 2rem 0;
 }
-.pairing-section .pairing-content .pairing-left-content h5 {
-  padding: 1rem;
-}
-.pairing-section .pairing-content .pairing-left-content ul {
-  text-align: left;
-}
-.pairing-section .pairing-content .pairing-left-content ul li {
-  margin-left: 2rem;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-}
 .pairing-section .pairing-content .pairing-left-content img {
   width: 60%;
 }
@@ -335,22 +329,37 @@ nav .nav-content button {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  border: 1px solid pink;
   margin-left: 3rem;
   width: 45%;
 }
 .pairing-section .pairing-content .pairing-right-content img {
-  margin: 3rem;
+  margin: 1rem;
   width: 60%;
 }
 .pairing-section .pairing-content .pairing-right-content h4 {
-  padding: 6rem;
+  padding: 3rem;
 }
-.pairing-section .pairing-content .pairing-right-content ul li {
+.pairing-section .pairing-content .pairing-right-content .pairing-good-list {
+  margin: 0;
+  padding: 0;
   text-align: left;
-  font-size: 1.8rem;
-  line-height: 3.4rem;
-  list-style-type: disc;
+}
+.pairing-section .pairing-content .pairing-right-content .pairing-good-list li {
+  list-style-type: circle;
+  margin-left: 2rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+.pairing-section .pairing-content .pairing-right-content h5 {
+  padding: 4rem 0 1rem 0;
+}
+.pairing-section .pairing-content .pairing-right-content .pairing-guidelines {
+  text-align: left;
+}
+.pairing-section .pairing-content .pairing-right-content .pairing-guidelines li {
+  margin-left: 2rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
 }
 
 .why-pair-section {
