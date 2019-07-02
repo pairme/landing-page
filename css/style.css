@@ -333,11 +333,11 @@ nav .nav-content button {
   width: 45%;
 }
 .pairing-section .pairing-content .pairing-right-content img {
-  margin: 1rem;
+  margin: 0 1rem;
   width: 60%;
 }
 .pairing-section .pairing-content .pairing-right-content h4 {
-  padding: 3rem;
+  padding: 2.5rem;
 }
 .pairing-section .pairing-content .pairing-right-content .pairing-good-list {
   margin: 0;
@@ -417,7 +417,7 @@ nav .nav-content button {
   box-shadow: 0 0 4px 2px rgba(151, 149, 184, 0.2);
   padding: 1rem;
   margin: 2rem;
-  height: 40%;
+  min-height: 400px;
   width: 50%;
   text-align: center;
 }
@@ -428,9 +428,11 @@ nav .nav-content button {
 }
 .team-section .team-content .card .img-name-container .team-title h2 {
   text-transform: uppercase;
+  font-size: 2rem;
 }
 .team-section .team-content .card .img-name-container .team-title h3 {
   margin-bottom: 1rem;
+  font-size: 1.6rem;
 }
 .team-section .team-content .card p {
   padding: 0 1rem;
