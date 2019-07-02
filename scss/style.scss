@@ -330,27 +330,64 @@ nav {
 .why-pair-section {
   @include flex(center, center);
   flex-direction: column;
-  // border: 1px solid red;
-  padding: 4rem;
-  h4 {
-    padding: 2rem 1rem;
-  }
+  padding-top: 10rem;
   .why-content {
-    @include flex(center, center);
-    flex-wrap: wrap;
-    // border: 1px solid skyblue;
-    img {
-      padding: 1.2rem;
-      margin: 1.4rem;
-      width: 20%;
-      // border: 1px solid pink;
+    padding: 2rem 1rem 4rem 1rem;
+    // border: 1px solid teal;
+    h4 {
+      padding: 2rem 1rem;
     }
-    p {
-      width: 20rem;
+    .why-pair {
+      @include flex(center, center);
+      flex-wrap: wrap;
+      // border: 1px solid skyblue;
       padding: 1rem;
-      margin: 1rem;
-      // border: 1px solid pink;
+      img {
+        width: 20%;
+        padding: 1.2rem;
+        // margin: 1.4rem;
+        // border: 1px solid pink;
+      }
+      p {
+        width: 20rem;
+        padding: 1.2rem;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        // margin: 2rem;
+        // border: 1px solid pink;
+      }
     }
   }
 }
 
+.team-section {
+  h2 {
+
+  }
+  .team-content {
+    @include flex(center, center);
+    .card {
+      @include flex(center, center);
+      flex-direction: column;
+      // border: 1px solid red;
+      padding: 1rem;
+      text-align: center;
+
+      .img-name-container {
+        img {
+          border-radius: 50%;
+          width: 200px;
+          padding: 3rem;
+        }
+        .team-title {
+          h2 {
+            text-transform: uppercase;
+          }
+          h3 {
+
+          }
+        }
+      }
+    }
+  }
+}

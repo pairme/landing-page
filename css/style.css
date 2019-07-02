@@ -352,26 +352,52 @@ nav .nav-content button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 4rem;
-}
-.why-pair-section h4 {
-  padding: 2rem 1rem;
+  padding-top: 10rem;
 }
 .why-pair-section .why-content {
+  padding: 2rem 1rem 4rem 1rem;
+}
+.why-pair-section .why-content h4 {
+  padding: 2rem 1rem;
+}
+.why-pair-section .why-content .why-pair {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-}
-.why-pair-section .why-content img {
-  padding: 1.2rem;
-  margin: 1.4rem;
-  width: 20%;
-}
-.why-pair-section .why-content p {
-  width: 20rem;
   padding: 1rem;
-  margin: 1rem;
+}
+.why-pair-section .why-content .why-pair img {
+  width: 20%;
+  padding: 1.2rem;
+}
+.why-pair-section .why-content .why-pair p {
+  width: 20rem;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+
+.team-section .team-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-section .team-content .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  text-align: center;
+}
+.team-section .team-content .card .img-name-container img {
+  border-radius: 50%;
+  width: 200px;
+  padding: 3rem;
+}
+.team-section .team-content .card .img-name-container .team-title h2 {
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=style.css.map */
