@@ -145,6 +145,10 @@ nav {
         font-size: 1.4rem;
         line-height: 1.4rem;
         box-shadow: 0 2px 2px 2px rgb($grey, .2);
+        transition: transform .3s;
+      }
+      button:hover {
+        transform: scale(1.03);
       }
     }
   }
@@ -196,6 +200,7 @@ nav {
     margin-top: 7vh;
     font-weight: 700;
     text-align: center;
+    animation: slideinright 1s;
   }
   .cta-content {
     @include flex(center, center);
@@ -207,13 +212,14 @@ nav {
       max-width: 50%;
 
       .cta-left-top-content {
-        padding: 1rem 2rem 0 2rem;
+        padding: 1rem 1rem 0 3rem;
         h5 {
           padding: 1rem;
           text-align: center;
         }
       }
       a {
+        transition: transform .3s;
         button {
           font-size: 1.6rem;
           text-transform: uppercase;
@@ -222,13 +228,17 @@ nav {
           box-shadow: 0 2px 2px 2px rgb($grey, .2);
           border: none;
           cursor: pointer;
+          transition: transform .3s;
+        }
+        button:hover {
+          transform: scale(1.03) translateY(-1.02rem);
         }
       }
       .cta-left-bottom-content {
         @include flex(center, center);
         flex-direction: column;
         p {
-          padding: 0 1rem 1.2rem 0;
+          padding: .5rem 1rem 1.2rem 0;
           text-align: center;
           font-size: 1.4rem;
           line-height: 1.6rem;
@@ -259,11 +269,12 @@ nav {
     }
     .jump-down {
       i {
+        margin-bottom: 2rem;
         font-size: 3rem;
         color: $grey;
         cursor: pointer;
-        margin-bottom: 2rem;
-        transition: transform .3s;
+        animation: moveInBottom 1s;
+        animation-delay: 1s;
       }
     }
   }
@@ -517,16 +528,21 @@ nav {
       box-shadow: 0 0 4px 2px rgb($grey, .2);
       padding: .5rem 1rem;
       margin: 1.2rem;
-      min-height: 55rem;
-      max-height: 10%;
-      width: 30%;
+      min-height: 50rem;
+      width: 25%;
       text-align: center;
+      transition: transform .3s;
       .img-name-container {
         img {
           border-radius: 50%;
           width: 10rem;
           box-shadow: 0 0 8px 4px rgb($grey, .4);
           margin: 2rem;
+          // transition: transform .3s;
+          filter: grayscale(50%);
+        }
+        img:hover {
+          filter: grayscale(0%);
         }
         .team-title {
           h2 {
@@ -556,7 +572,13 @@ nav {
         }
       }
     }
+    .card:hover {
+      transform: scale(1.02) translateY(-1.03rem);
+    }
   }
+}
+[data-dev="kristin"] {
+  background-image: url(/assets/kristin.png);
 }
 // TEAM 768
 @media(max-width: $tablet) {
@@ -639,5 +661,31 @@ footer {
     height: 10vh;
     width: 100%;
     background-color: $coral;
+  }
+}
+
+@keyframes slideinright {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
   }
 }

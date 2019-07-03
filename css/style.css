@@ -189,6 +189,10 @@ nav .nav-content ul button {
   font-size: 1.4rem;
   line-height: 1.4rem;
   box-shadow: 0 2px 2px 2px rgba(151, 149, 184, 0.2);
+  transition: transform 0.3s;
+}
+nav .nav-content ul button:hover {
+  transform: scale(1.03);
 }
 
 @media (max-width: 768px) {
@@ -228,6 +232,7 @@ nav .nav-content ul button {
   margin-top: 7vh;
   font-weight: 700;
   text-align: center;
+  animation: slideinright 1s;
 }
 .cta-section .cta-content {
   display: flex;
@@ -243,11 +248,14 @@ nav .nav-content ul button {
   max-width: 50%;
 }
 .cta-section .cta-content .cta-left-content .cta-left-top-content {
-  padding: 1rem 2rem 0 2rem;
+  padding: 1rem 1rem 0 3rem;
 }
 .cta-section .cta-content .cta-left-content .cta-left-top-content h5 {
   padding: 1rem;
   text-align: center;
+}
+.cta-section .cta-content .cta-left-content a {
+  transition: transform 0.3s;
 }
 .cta-section .cta-content .cta-left-content a button {
   font-size: 1.6rem;
@@ -257,6 +265,10 @@ nav .nav-content ul button {
   box-shadow: 0 2px 2px 2px rgba(151, 149, 184, 0.2);
   border: none;
   cursor: pointer;
+  transition: transform 0.3s;
+}
+.cta-section .cta-content .cta-left-content a button:hover {
+  transform: scale(1.03) translateY(-1.02rem);
 }
 .cta-section .cta-content .cta-left-content .cta-left-bottom-content {
   display: flex;
@@ -265,7 +277,7 @@ nav .nav-content ul button {
   flex-direction: column;
 }
 .cta-section .cta-content .cta-left-content .cta-left-bottom-content p {
-  padding: 0 1rem 1.2rem 0;
+  padding: 0.5rem 1rem 1.2rem 0;
   text-align: center;
   font-size: 1.4rem;
   line-height: 1.6rem;
@@ -297,11 +309,12 @@ nav .nav-content ul button {
   text-align: center;
 }
 .cta-section .cta-learn-more .jump-down i {
+  margin-bottom: 2rem;
   font-size: 3rem;
   color: #9795b8;
   cursor: pointer;
-  margin-bottom: 2rem;
-  transition: transform 0.3s;
+  animation: moveInBottom 1s;
+  animation-delay: 1s;
 }
 
 @media (max-width: 1000px) {
@@ -541,16 +554,20 @@ nav .nav-content ul button {
   box-shadow: 0 0 4px 2px rgba(151, 149, 184, 0.2);
   padding: 0.5rem 1rem;
   margin: 1.2rem;
-  min-height: 55rem;
-  max-height: 10%;
-  width: 30%;
+  min-height: 50rem;
+  width: 25%;
   text-align: center;
+  transition: transform 0.3s;
 }
 .team-section .team-content .card .img-name-container img {
   border-radius: 50%;
   width: 10rem;
   box-shadow: 0 0 8px 4px rgba(151, 149, 184, 0.4);
   margin: 2rem;
+  filter: grayscale(50%);
+}
+.team-section .team-content .card .img-name-container img:hover {
+  filter: grayscale(0%);
 }
 .team-section .team-content .card .img-name-container .team-title h2 {
   text-transform: uppercase;
@@ -575,6 +592,13 @@ nav .nav-content ul button {
   margin: 1rem;
   color: #37346e;
   cursor: pointer;
+}
+.team-section .team-content .card:hover {
+  transform: scale(1.02) translateY(-1.03rem);
+}
+
+[data-dev=kristin] {
+  background-image: url(/assets/kristin.png);
 }
 
 @media (max-width: 768px) {
@@ -646,6 +670,30 @@ footer p {
   height: 10vh;
   width: 100%;
   background-color: #FD806A;
+}
+
+@keyframes slideinright {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
