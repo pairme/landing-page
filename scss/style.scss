@@ -275,6 +275,10 @@ nav {
         cursor: pointer;
         animation: moveInBottom 1s;
         animation-delay: 1s;
+        transition: transform .3s;
+      }
+      i:hover {
+        transform: scale(1.5);
       }
     }
   }

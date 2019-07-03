@@ -316,6 +316,10 @@ nav .nav-content ul button:hover {
   cursor: pointer;
   animation: moveInBottom 1s;
   animation-delay: 1s;
+  transition: transform 0.3s;
+}
+.cta-section .cta-learn-more .jump-down i:hover {
+  transform: scale(1.5);
 }
 
 @media (max-width: 1000px) {
