@@ -119,9 +119,7 @@ nav {
     @include flex(space-between, center);
     width: 1000px;
     text-align: center;
-
     .logo {
-
       img {
         margin-right: 40vw;
         padding: 0 1rem;
@@ -215,13 +213,16 @@ nav {
           text-align: center;
         }
       }
-      button {
-        font-size: 1.6rem;
-        text-transform: uppercase;
-        padding: 1.8rem 3rem;
-        margin: 2rem 0 1rem 0;
-        box-shadow: 0 2px 2px 2px rgb($grey, .2);
-        border: none;
+      a {
+        button {
+          font-size: 1.6rem;
+          text-transform: uppercase;
+          padding: 1.8rem 3rem;
+          margin: 2rem 0 1rem 0;
+          box-shadow: 0 2px 2px 2px rgb($grey, .2);
+          border: none;
+          cursor: pointer;
+        }
       }
       .cta-left-bottom-content {
         @include flex(center, center);
@@ -508,28 +509,30 @@ nav {
   }
   .team-content {
     @include flex(center, flex-start);
-    margin: 2rem;
-
+    flex-wrap: wrap;
+    padding: 3rem 1rem 6rem 1rem;
     .card {
       @include flex(space-between, center);
       flex-direction: column;
       box-shadow: 0 0 4px 2px rgb($grey, .2);
-      padding: 1rem;
-      margin: 2rem;
-      min-height: 400px;
-      width: 50%;
+      padding: .5rem 1rem;
+      margin: 1.2rem;
+      min-height: 55rem;
+      max-height: 10%;
+      width: 30%;
       text-align: center;
-
       .img-name-container {
         img {
           border-radius: 50%;
-          width: 200px;
-          padding: 3rem;
+          width: 10rem;
+          box-shadow: 0 0 8px 4px rgb($grey, .4);
+          margin: 2rem;
         }
         .team-title {
           h2 {
             text-transform: uppercase;
             font-size: 2rem;
+            line-height: 2rem;
           }
           h3 {
             margin-bottom: 1rem;
@@ -538,28 +541,95 @@ nav {
         }
       }
       p {
-        padding: 0 1rem;
+        padding: 0 .8rem;
       }
       .social {
         @include flex(center, center);
         font-size: 2rem;
-        // border: 1px solid red;
         padding: 1rem 5rem;
-
-        i {
-          margin: 20%;
-          // border: 1px solid green;
-          cursor: pointer;
+        a {
+          i {
+            margin: 1rem;
+            color: $main;
+            cursor: pointer;
+          }
         }
       }
     }
   }
 }
-
+// TEAM 768
 @media(max-width: $tablet) {
-  
+  .team-section {
+    .team-content {
+      @include flex(space-between, flex-start);
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      .card {
+        @include flex(center, center);
+        flex-direction: row;
+        padding: .5rem;
+        margin: 1rem 2rem;
+        min-height: 0rem;
+        // height: 90%;
+        width: 94%;
+        .img-name-container {
+          // width: 30%;
+          img {
+            width: 60%;
+            padding: 0rem;
+            margin: 1rem;
+          }
+          .team-title {
+            h2 {
+              margin: .5rem 2rem;
+            }
+          }
+        }
+        p {
+          padding: 1rem;
+          margin: 1rem;
+          width: 70%;
+        }
+        .social {
+          flex-direction: column;
+          padding: 0 1rem 0 0;
+          a {
+            i {
+              margin: 1rem;
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
-
+// TEAM 576
+@media(max-width: $mobile) {
+  .team-section {
+    .team-content {
+      .card {
+        flex-direction: column;
+        padding: 1rem;
+        width: 92%;
+        .img-name-container {
+          img {
+            margin: 2rem 0;
+          }
+        }
+        p {
+          margin: 0rem;
+          width: 90%;
+        }
+        .social {
+          flex-direction: row;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
 
 footer {
   @include flex(center, center);
