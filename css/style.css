@@ -193,11 +193,9 @@ nav .nav-content ul button {
 
 @media (max-width: 768px) {
   nav .nav-content ul {
-    flex-wrap: wrap;
     padding: 1rem 1rem 1rem 0;
   }
   nav .nav-content ul button {
-    padding: 0.5rem 1rem;
     margin: 0 0 0 0;
   }
 }
@@ -429,7 +427,7 @@ nav .nav-content ul button {
 
 @media (max-width: 768px) {
   .pairing-section {
-    padding-top: 1rem;
+    padding-top: 0rem;
   }
   .pairing-section .pairing-content {
     flex-direction: column;
@@ -462,10 +460,10 @@ nav .nav-content ul button {
     flex-direction: column;
   }
   .pairing-section .pairing-content .pairing-left-content {
-    width: 90%;
+    width: 100%;
   }
   .pairing-section .pairing-content .pairing-right-content {
-    width: 80%;
+    width: 100%;
   }
   .pairing-section .pairing-content .pairing-right-content img {
     width: 90%;
@@ -505,13 +503,18 @@ nav .nav-content ul button {
   flex-wrap: wrap;
   padding: 1rem;
 }
-.why-pair-section .why-content .why-pair img {
-  width: 20%;
-  padding: 1.2rem;
+.why-pair-section .why-content .why-pair .why-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.why-pair-section .why-content .why-pair p {
+.why-pair-section .why-content .why-pair .why-card img {
+  width: 50%;
+  padding: 1rem;
+}
+.why-pair-section .why-content .why-pair .why-card p {
   width: 20rem;
-  padding: 1.2rem;
+  padding: 1rem;
   font-size: 1.8rem;
   line-height: 2.2rem;
 }

@@ -151,22 +151,20 @@ nav {
     }
   }
 }
-// NAV TABLET
+// NAV TABLET 768
 @media(max-width: $tablet) {
   nav {
     .nav-content {
       ul {
-        flex-wrap: wrap;
         padding: 1rem 1rem 1rem 0;
         button {
-          padding: .5rem 1rem;
           margin: 0 0 0 0;
         }
       }
     }
   }
 }
-// NAV MOBILE
+// NAV MOBILE 576
 @media(max-width: $mobile) {
   nav {
     .nav-content {
@@ -406,7 +404,7 @@ nav {
 // PAIRING 768px
 @media (max-width: $tablet) {
   .pairing-section {
-    padding-top: 1rem;
+    padding-top: 0rem;
     .pairing-content {
       flex-direction: column;
       .pairing-left-content {
@@ -443,10 +441,10 @@ nav {
     .pairing-content {
       flex-direction: column;
       .pairing-left-content {
-        width: 90%;
+        width: 100%;
       }
       .pairing-right-content {
-        width: 80%;
+        width: 100%;
         img {
           width: 90%;
           order: 5;
@@ -478,31 +476,31 @@ nav {
     @include flex(center, center);
     flex-direction: column;
     padding: 2rem 1rem 4rem 1rem;
-
     h4 {
       padding: 2rem 1rem;
     }
     .why-pair {
       @include flex(center, center);
       flex-wrap: wrap;
-      // border: 1px solid skyblue;
       padding: 1rem;
-      img {
-        width: 20%;
-        padding: 1.2rem;
-        // border: 1px solid pink;
-      }
-      p {
-        width: 20rem;
-        padding: 1.2rem;
-        font-size: 1.8rem;
-        line-height: 2.2rem;
-        // border: 1px solid pink;
+      .why-card {
+        @include flex(center, center);
+        img {
+          width: 50%;
+          padding: 1rem;
+        }
+        p {
+          width: 20rem;
+          padding: 1rem;
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+        }
       }
     }
   }
 }
 
+// TEAM SECTION
 .team-section {
   padding-top: 10rem;
   h4 {
@@ -559,7 +557,7 @@ nav {
 }
 
 @media(max-width: $tablet) {
-
+  
 }
 
 
