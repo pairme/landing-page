@@ -132,7 +132,6 @@ nav {
       @include flex(flex-end, center);
       width: 100%;
       padding: 0 .5rem;
-
       li {
         font-weight: 700;
         margin: 0 3%;
@@ -152,7 +151,7 @@ nav {
     }
   }
 }
-
+// NAV TABLET
 @media(max-width: $tablet) {
   nav {
     .nav-content {
@@ -167,7 +166,7 @@ nav {
     }
   }
 }
-
+// NAV MOBILE
 @media(max-width: $mobile) {
   nav {
     .nav-content {
@@ -183,11 +182,15 @@ nav {
         li {
           padding-bottom: 1rem;
         }
+        button {
+          margin: .5rem 0
+        }
       }
     }
   }
 }
 
+// CTA SECTION
 .cta-section {
   @include flex(space-between, center);
   flex-direction: column;
@@ -209,7 +212,6 @@ nav {
 
       .cta-left-top-content {
         padding: 1rem 2rem 0 2rem;
-
         h5 {
           padding: 1rem;
           text-align: center;
@@ -226,8 +228,6 @@ nav {
       .cta-left-bottom-content {
         @include flex(center, center);
         flex-direction: column;
-        // border: 1px solid red;
-
         p {
           padding: 0 1rem 1.2rem 0;
           text-align: center;
@@ -242,11 +242,10 @@ nav {
       }
     }
     .cta-right-content {
+      @include flex(center, center);
       margin-right: 2rem;
-
       img {
         width: 100%;
-        // border: 1px solid blue;
         padding: 1rem;
       }
     }
@@ -257,6 +256,7 @@ nav {
     h3 {
       padding: 1rem;
       font-weight: 700;
+      text-align: center;
     }
     .jump-down {
       i {
@@ -265,34 +265,19 @@ nav {
         cursor: pointer;
         margin-bottom: 2rem;
         transition: transform .3s;
-
       }
     }
   }
 }
 
+// CTA SECTION 1000px
 @media(max-width: $standard) {
   .cta-section {
-  // @include flex(space-between, center);
-  // flex-direction: column;
-  // min-height: 90vh;
-
     h1 {
-      // margin-top: 5vh;
-      // font-weight: 700;
-      // text-align: center;
       font-size: 3.4rem;
     }
     .cta-content {
-      // @include flex(center, center);
-      // margin: 0 0 2% 0;
-      // border: 1px solid teal;
-
       .cta-left-content {
-        // @include flex(center, center);
-        // flex-direction: column;
-        // max-width: 50%;
-
         .cta-left-top-content {
           padding: 1rem 0 0 2rem;
           h5 {
@@ -300,154 +285,73 @@ nav {
           }
         }
         button {
-          // font-size: 1.6rem;
           padding: 1.4rem 3rem;
-          // margin: 2rem 0 1rem 0;
-
         }
+      }
+    }
+  }
+}
+// CTA SECTION 768px
+@media(max-width: $tablet) {
+  .cta-section {
+    h1 {
+      font-size: 2.6rem;
+    }
+    .cta-content {
+      flex-direction: column;
+      .cta-left-content {
+        max-width: 90%;
         .cta-left-bottom-content {
-          // @include flex(center, center);
-          // flex-direction: column;
-          // border: 1px solid red;
-
           p {
-            // padding: 0 1rem 1.2rem 0;
-            // text-align: center;
-            // font-size: 1.4rem;
-            // line-height: 1.6rem;
-            a {
-              // font-size: 1.4rem;
-              // line-height: 2rem;
-              // color: $main;
-            }
+            padding: 0 1rem 1.4rem 0;
           }
         }
       }
       .cta-right-content {
-        // margin-right: 2rem;
-
         img {
-          // width: 100%;
-          // border: 1px solid blue;
-          // padding: 1rem;
+          width: 80%;
         }
       }
     }
     .cta-learn-more {
-      // @include flex(center, center);
-      // flex-direction: column;
-      h3 {
-        // padding: 1rem;
-        // font-weight: 700;
-      }
-      .jump-down {
-        i {
-          // font-size: 3rem;
-          // color: $grey;
-          // cursor: pointer;
-          // margin-bottom: 2rem;
-          // transition: transform .3s;
-
-        }
-      }
-    }
-  }
-}
-
-@media(max-width: $tablet) {
-  .cta-section {
-  h1 {
-    // margin-top: 5vh;
-    // font-weight: 700;
-    // text-align: center;
-    font-size: 2.6rem;
-  }
-  .cta-content {
-    // @include flex(center, center);
-    flex-direction: column;
-    // margin: 0 0 2% 0;
-    // border: 1px solid teal;
-
-    .cta-left-content {
-      // @include flex(center, center);
-      // flex-direction: column;
-      max-width: 90%;
-
-      .cta-left-top-content {
-        // padding: 1rem 2rem 0 2rem;
-
-        h5 {
-          // padding: 1rem;
-          // text-align: center;
-        }
-      }
-      button {
-        // font-size: 1.6rem;
-        // text-transform: uppercase;
-        // padding: 1.8rem 3rem;
-        // margin: 2rem 0 1rem 0;
-        // box-shadow: 0 2px 2px 2px rgb($grey, .2);
-        // border: none;
-      }
-      .cta-left-bottom-content {
-        // @include flex(center, center);
-        // flex-direction: column;
-        // border: 1px solid red;
-
-        p {
-          padding: 0 1rem 1.4rem 0;
-
-        }
-      }
-    }
-    .cta-right-content {
-      // margin-right: 2rem;
       @include flex(center, center);
-      img {
-        width: 80%;
-        // border: 1px solid blue;
-        // padding: 1rem;
-      }
-    }
-  }
-  .cta-learn-more {
-    // @include flex(center, center);
-    // flex-direction: column;
-    h3 {
-      // padding: 1rem;
-      // font-weight: 700;
-    }
-    .jump-down {
-      i {
-        // font-size: 3rem;
-        // color: $grey;
-        // cursor: pointer;
-        // margin-bottom: 2rem;
-        // transition: transform .3s;
-
+      flex-direction: column;
+      h3 {
+        align-self: center;
       }
     }
   }
 }
+// CTA SECTION 576px
+@media(max-width: $mobile) {
+  .cta-section {
+    h1 {
+      padding: 0 2rem;
+    }
+    .cta-content {
+      .cta-right-content {
+        @include flex(center, center);
+        img {
+          width: 80%;
+        }
+      }
+    }
+  }
 }
 
-
+// PAIRING SECTION
 .pairing-section {
-  // border: 1px solid red;
-  padding-top: 5rem;
-
+  padding-top: 2rem;
   .pairing-content {
     @include flex(center, center);
-    // border: 1px solid blue;
     text-align: center;
-    box-shadow: 0 0 6px 2px rgb($grey, .1);
+    // box-shadow: 0 0 6px 2px rgb($grey, .1);
     margin: 4rem;
     .pairing-left-content {
       @include flex(center, center);
       flex-direction: column;
       flex-wrap: wrap;
       width: 45%;
-      // border: 1px solid pink;
       h4 {
         padding: 6rem 0 3rem 0;
       }
@@ -457,28 +361,24 @@ nav {
       h3 {
         padding: 2rem 0;
       }
-
       img {
-        width: 60%
+        width: 70%
       }
     }
     .pairing-right-content {
       @include flex(center, center);
       flex-direction: column;
       flex-wrap: wrap;
-      // border: 1px solid pink;
       margin-left: 3rem;
       width: 45%;
-
       img {
-        margin: 0 1rem;
-        width: 60%;
+        margin: 1rem;
+        width: 70%;
       }
       h4 {
         padding: 2.5rem;
       }
       .pairing-good-list {
-        // border: 1px solid red;
         margin: 0;
         padding: 0;
         text-align: left;
@@ -503,8 +403,73 @@ nav {
     }
   }
 }
+// PAIRING 768px
+@media (max-width: $tablet) {
+  .pairing-section {
+    padding-top: 1rem;
+    .pairing-content {
+      flex-direction: column;
+      .pairing-left-content {
+        width: 90%;
+      }
+      .pairing-right-content {
+        width: 80%;
+        img {
+          width: 90%;
+          order: 5;
+        }
+        .pairing-good-list {
+          li {
+            margin-left: 2rem;
+          }
+        }
+        h5 {
+          padding: 6rem 0 1rem 0;
+        }
+        .pairing-guidelines {
+          li {
+            margin-left: 0rem;
+          }
+        }
+      }
+    }
+  }
+}
 
+// PAIRING 576px
+@media (max-width: $mobile) {
+  .pairing-section {
+    padding-top: 14rem;
+    .pairing-content {
+      flex-direction: column;
+      .pairing-left-content {
+        width: 90%;
+      }
+      .pairing-right-content {
+        width: 80%;
+        img {
+          width: 90%;
+          order: 5;
+        }
+        .pairing-good-list {
+          li {
+            margin-left: 2rem;
+          }
+        }
+        h5 {
+          padding: 6rem 0 1rem 0;
+        }
+        .pairing-guidelines {
+          li {
+            margin-left: 0rem;
+          }
+        }
+      }
+    }
+  }
+}
 
+// WHY SECTION
 .why-pair-section {
   @include flex(center, center);
   flex-direction: column;
