@@ -114,7 +114,7 @@ nav {
   box-shadow: 0 7px 7px -2px rgb($grey, .2);
   position: sticky;
   top: 0%;
-
+  z-index: 99;
   .nav-content {
     @include flex(space-between, center);
     width: 1000px;
@@ -180,7 +180,7 @@ nav {
       ul {
         flex-direction: column;
         li {
-          padding-bottom: 1rem;
+          padding-bottom: .5rem;
         }
         button {
           margin: .5rem 0
@@ -576,9 +576,6 @@ nav {
       transform: scale(1.02) translateY(-1.03rem);
     }
   }
-}
-[data-dev="kristin"] {
-  background-image: url(/assets/kristin.png);
 }
 // TEAM 768
 @media(max-width: $tablet) {
