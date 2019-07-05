@@ -22,44 +22,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  // @include font(4rem, 4.2rem);
-  font-size: 4rem;
-  line-height: 4.2rem;
-
+  @include font(4rem, 4.2rem);
 }
 
 h2 {
-  // @include font(3rem, 3.2rem);
-  font-size: 3rem;
-  line-height: 3.2rem;
+  @include font(3rem, 3.2rem);
 }
 
 h3 {
-  // @include font(2.4rem, 2.6rem);
-  font-size: 2.4rem;
-  line-height: 2.6rem;
+  @include font(2.4rem, 2.6rem);
   color: $accent;
   margin-bottom: 1rem;
 }
 
 h4 {
-  // @include font(2.2rem, 2.4rem);
-  font-size: 2.2rem;
-  line-height: 2.4rem;
+  @include font(2.2rem, 2.4rem);
   text-transform: uppercase;
   color: $coral;
 }
 
 h5 {
-  // @include font(2rem, 2.2rem);
-  font-size: 2rem;
-  line-height: 2.2rem;
+  @include font(2rem, 2.2rem);
 }
 
 h6 {
-  // @include font(1.8rem, 2.2rem);
-  font-size: 1.8rem;
-  line-height: 2.2rem;
+  @include font(1.8rem, 2.2rem);
 }
 
 a {
@@ -219,7 +206,6 @@ nav {
         }
       }
       a {
-        transition: transform .3s;
         button {
           font-size: 1.6rem;
           text-transform: uppercase;
@@ -390,7 +376,7 @@ nav {
         width: 70%;
       }
       h4 {
-        padding: 2.5rem;
+        padding: 2.5rem 0;
       }
       .pairing-good-list {
         margin: 0;
@@ -460,6 +446,7 @@ nav {
         width: 100%;
       }
       .pairing-right-content {
+        margin: 0;
         width: 100%;
         img {
           width: 90%;
@@ -642,6 +629,7 @@ nav {
           }
         }
         p {
+          padding: 1rem 0;
           margin: 0rem;
           width: 90%;
         }
@@ -688,5 +676,60 @@ footer {
   100% {
     opacity: 1;
     transform: translate(0);
+  }
+}
+
+@-webkit-keyframes hvr-wobble-vert {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes hvr-wobble-vert {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }

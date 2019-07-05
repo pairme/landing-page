@@ -71,16 +71,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  font-family: "Quicksand", sans-serif;
+  color: #37346e;
   font-size: 4rem;
   line-height: 4.2rem;
 }
 
 h2 {
+  font-family: "Quicksand", sans-serif;
+  color: #37346e;
   font-size: 3rem;
   line-height: 3.2rem;
 }
 
 h3 {
+  font-family: "Quicksand", sans-serif;
+  color: #37346e;
   font-size: 2.4rem;
   line-height: 2.6rem;
   color: #b6eb1a;
@@ -88,6 +94,8 @@ h3 {
 }
 
 h4 {
+  font-family: "Quicksand", sans-serif;
+  color: #37346e;
   font-size: 2.2rem;
   line-height: 2.4rem;
   text-transform: uppercase;
@@ -95,11 +103,15 @@ h4 {
 }
 
 h5 {
+  font-family: "Quicksand", sans-serif;
+  color: #37346e;
   font-size: 2rem;
   line-height: 2.2rem;
 }
 
 h6 {
+  font-family: "Quicksand", sans-serif;
+  color: #37346e;
   font-size: 1.8rem;
   line-height: 2.2rem;
 }
@@ -254,9 +266,6 @@ nav .nav-content ul button:hover {
 .cta-section .cta-content .cta-left-content .cta-left-top-content h5 {
   padding: 1rem;
   text-align: center;
-}
-.cta-section .cta-content .cta-left-content a {
-  transition: transform 0.3s;
 }
 .cta-section .cta-content .cta-left-content a button {
   font-size: 1.6rem;
@@ -419,7 +428,7 @@ nav .nav-content ul button:hover {
   width: 70%;
 }
 .pairing-section .pairing-content .pairing-right-content h4 {
-  padding: 2.5rem;
+  padding: 2.5rem 0;
 }
 .pairing-section .pairing-content .pairing-right-content .pairing-good-list {
   margin: 0;
@@ -482,6 +491,7 @@ nav .nav-content ul button:hover {
     width: 100%;
   }
   .pairing-section .pairing-content .pairing-right-content {
+    margin: 0;
     width: 100%;
   }
   .pairing-section .pairing-content .pairing-right-content img {
@@ -652,6 +662,7 @@ nav .nav-content ul button:hover {
     margin: 2rem 0;
   }
   .team-section .team-content .card p {
+    padding: 1rem 0;
     margin: 0rem;
     width: 90%;
   }
@@ -694,6 +705,58 @@ footer p {
   100% {
     opacity: 1;
     transform: translate(0);
+  }
+}
+@-webkit-keyframes hvr-wobble-vert {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes hvr-wobble-vert {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
