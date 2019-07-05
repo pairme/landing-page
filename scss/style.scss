@@ -107,7 +107,7 @@ ul {
 
 
 
-
+// NAV
 nav {
   @include flex(center, center);
   background-color: $white;
@@ -153,7 +153,7 @@ nav {
     }
   }
 }
-// NAV TABLET 768
+// NAV 768
 @media(max-width: $tablet) {
   nav {
     .nav-content {
@@ -166,7 +166,7 @@ nav {
     }
   }
 }
-// NAV MOBILE 576
+// NAV 576
 @media(max-width: $mobile) {
   nav {
     .nav-content {
@@ -190,7 +190,7 @@ nav {
   }
 }
 
-// CTA SECTION
+// CTA
 .cta-section {
   @include flex(space-between, center);
   flex-direction: column;
@@ -284,7 +284,7 @@ nav {
   }
 }
 
-// CTA SECTION 1000px
+// CTA 1000px
 @media(max-width: $standard) {
   .cta-section {
     h1 {
@@ -305,7 +305,7 @@ nav {
     }
   }
 }
-// CTA SECTION 768px
+// CTA 768px
 @media(max-width: $tablet) {
   .cta-section {
     h1 {
@@ -336,7 +336,7 @@ nav {
     }
   }
 }
-// CTA SECTION 576px
+// CTA 576px
 @media(max-width: $mobile) {
   .cta-section {
     h1 {
@@ -353,7 +353,7 @@ nav {
   }
 }
 
-// PAIRING SECTION
+// PAIRING
 .pairing-section {
   padding-top: 2rem;
   .pairing-content {
