@@ -100,6 +100,10 @@ nav {
   background-color: $white;
   box-shadow: 0 7px 7px -2px rgb($grey, .2);
   position: sticky;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
   top: 0%;
   z-index: 99;
   .nav-content {
