@@ -1,7 +1,6 @@
 @import 'variables';
 @import 'mixins';
 @import 'reset';
-// @import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -89,11 +88,6 @@ ul {
   background-color: $white;
 }
 
-
-
-
-
-
 // NAV
 nav {
   @include flex(center, center);
@@ -113,8 +107,9 @@ nav {
     .logo {
       img {
         margin-right: 40vw;
-        padding: 0 1rem;
-        margin: 0rem 0;
+        padding: 0 0 0 1rem;
+        margin: 0;
+        cursor: pointer;
       }
     }
     ul {
@@ -162,18 +157,20 @@ nav {
   nav {
     .nav-content {
       width: 500px;
-      flex-direction: column;
       a {
         img {
           padding-top: .5rem;
         }
       }
       ul {
-        flex-direction: column;
+        // flex-direction: column;
+        flex-wrap: wrap;
         li {
+          font-size: 1.2rem;
           padding-bottom: .5rem;
         }
         button {
+          order: -1;
           margin: .5rem 0
         }
       }
@@ -186,9 +183,8 @@ nav {
   @include flex(space-between, center);
   flex-direction: column;
   min-height: 90vh;
-
+  margin-top: 7vh;
   h1 {
-    margin-top: 7vh;
     font-weight: 700;
     text-align: center;
     animation: slideinright 1s;
@@ -196,12 +192,10 @@ nav {
   .cta-content {
     @include flex(center, center);
     margin: 0 0 2% 0;
-
     .cta-left-content {
       @include flex(center, center);
       flex-direction: column;
       max-width: 50%;
-
       .cta-left-top-content {
         padding: 1rem 1rem 0 3rem;
         h5 {
@@ -259,7 +253,7 @@ nav {
     }
     .jump-down {
       i {
-        margin-bottom: 2rem;
+        padding: 2rem;
         font-size: 3rem;
         color: $grey;
         cursor: pointer;
@@ -273,7 +267,6 @@ nav {
     }
   }
 }
-
 // CTA 1000px
 @media(max-width: $standard) {
   .cta-section {
@@ -333,8 +326,14 @@ nav {
       padding: 0 2rem;
     }
     .cta-content {
+      .cta-left-content {
+        .cta-left-top-content {
+          padding-left: 0;
+        }
+      }
       .cta-right-content {
         @include flex(center, center);
+        margin-right: 0;
         img {
           width: 80%;
         }
@@ -345,17 +344,19 @@ nav {
 
 // PAIRING
 .pairing-section {
-  padding-top: 2rem;
+  @include flex(space-between, center);
+  flex-direction: column;
+  padding-top: 7rem;
+  min-height: 100vh;
   .pairing-content {
     @include flex(center, center);
     text-align: center;
-    // box-shadow: 0 0 6px 2px rgb($grey, .1);
-    margin: 4rem;
     .pairing-left-content {
       @include flex(center, center);
       flex-direction: column;
       flex-wrap: wrap;
       width: 45%;
+      padding: 0 2rem;
       h4 {
         padding: 6rem 0 3rem 0;
       }
@@ -406,6 +407,24 @@ nav {
       }
     }
   }
+  .pairing-learn-more {
+    @include flex(space-around, center);
+    flex-direction: column;
+    .arrow-more {
+      i {
+        padding: 2rem;
+        font-size: 3rem;
+        color: $grey;
+        cursor: pointer;
+        animation: moveInBottom 1s;
+        animation-delay: 1s;
+        transition: transform .3s;
+      }
+      i:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
 }
 // PAIRING 768px
 @media (max-width: $tablet) {
@@ -439,11 +458,10 @@ nav {
     }
   }
 }
-
 // PAIRING 576px
 @media (max-width: $mobile) {
   .pairing-section {
-    padding-top: 14rem;
+    padding-top: 5rem;
     .pairing-content {
       flex-direction: column;
       .pairing-left-content {
@@ -474,11 +492,12 @@ nav {
   }
 }
 
-// WHY SECTION
+// WHY
 .why-pair-section {
-  @include flex(center, center);
+  @include flex(space-between, center);
   flex-direction: column;
   padding-top: 7rem;
+  min-height: 100vh;
   .why-content {
     @include flex(center, center);
     flex-direction: column;
@@ -505,11 +524,42 @@ nav {
       }
     }
   }
+  .why-learn-more {
+    @include flex(space-around, center);
+    flex-direction: column;
+
+    .arrow-more {
+      i {
+        padding: 2rem;
+        font-size: 3rem;
+        color: $grey;
+        cursor: pointer;
+        animation: moveInBottom 1s;
+        animation-delay: 1s;
+        transition: transform .3s;
+      }
+      i:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+// WHY 768
+@media (max-width: $tablet) {
+  .why-pair-section {
+    padding-top: 5rem;
+  }
+}
+// WHY 576
+@media (max-width: $mobile) {
+  .why-pair-section {
+    padding-top: 7rem;
+  }
 }
 
-// TEAM SECTION
+// TEAM
 .team-section {
-  padding-top: 10rem;
+  padding: 10rem 0;
   h4 {
     text-align: center;
   }
@@ -533,7 +583,6 @@ nav {
           width: 10rem;
           box-shadow: 0 0 8px 4px rgb($grey, .4);
           margin: 2rem;
-          // transition: transform .3s;
           filter: grayscale(50%);
         }
         img:hover {
@@ -585,14 +634,13 @@ nav {
         padding: .5rem;
         margin: 1rem 2rem;
         min-height: 0rem;
-        // height: 90%;
         width: 94%;
         .img-name-container {
-          // width: 30%;
           img {
             width: 60%;
             padding: 0rem;
             margin: 1rem;
+            filter: grayscale(0%);
           }
           .team-title {
             h2 {
@@ -612,6 +660,7 @@ nav {
             i {
               margin: 1rem;
               width: 50%;
+              font-size: 2rem;
             }
           }
         }
@@ -622,6 +671,7 @@ nav {
 // TEAM 576
 @media(max-width: $mobile) {
   .team-section {
+    padding-top: 12rem;
     .team-content {
       .card {
         flex-direction: column;
@@ -640,12 +690,17 @@ nav {
         .social {
           flex-direction: row;
           padding: 1rem;
+          i {
+            padding: 0 1rem;
+            font-size: 2.5rem;
+          }
         }
       }
     }
   }
 }
 
+// FOOTER
 footer {
   @include flex(center, center);
   p {

@@ -181,8 +181,9 @@ nav .nav-content {
 }
 nav .nav-content .logo img {
   margin-right: 40vw;
-  padding: 0 1rem;
-  margin: 0rem 0;
+  padding: 0 0 0 1rem;
+  margin: 0;
+  cursor: pointer;
 }
 nav .nav-content ul {
   display: flex;
@@ -223,18 +224,19 @@ nav .nav-content ul button:hover {
 @media (max-width: 576px) {
   nav .nav-content {
     width: 500px;
-    flex-direction: column;
   }
   nav .nav-content a img {
     padding-top: 0.5rem;
   }
   nav .nav-content ul {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
   nav .nav-content ul li {
+    font-size: 1.2rem;
     padding-bottom: 0.5rem;
   }
   nav .nav-content ul button {
+    order: -1;
     margin: 0.5rem 0;
   }
 }
@@ -244,9 +246,9 @@ nav .nav-content ul button:hover {
   align-items: center;
   flex-direction: column;
   min-height: 90vh;
+  margin-top: 7vh;
 }
 .cta-section h1 {
-  margin-top: 7vh;
   font-weight: 700;
   text-align: center;
   animation: slideinright 1s;
@@ -323,7 +325,7 @@ nav .nav-content ul button:hover {
   text-align: center;
 }
 .cta-section .cta-learn-more .jump-down i {
-  margin-bottom: 2rem;
+  padding: 2rem;
   font-size: 3rem;
   color: #9795b8;
   cursor: pointer;
@@ -379,24 +381,32 @@ nav .nav-content ul button:hover {
   .cta-section h1 {
     padding: 0 2rem;
   }
+  .cta-section .cta-content .cta-left-content .cta-left-top-content {
+    padding-left: 0;
+  }
   .cta-section .cta-content .cta-right-content {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 0;
   }
   .cta-section .cta-content .cta-right-content img {
     width: 80%;
   }
 }
 .pairing-section {
-  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 7rem;
+  min-height: 100vh;
 }
 .pairing-section .pairing-content {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 4rem;
 }
 .pairing-section .pairing-content .pairing-left-content {
   display: flex;
@@ -405,6 +415,7 @@ nav .nav-content ul button:hover {
   flex-direction: column;
   flex-wrap: wrap;
   width: 45%;
+  padding: 0 2rem;
 }
 .pairing-section .pairing-content .pairing-left-content h4 {
   padding: 6rem 0 3rem 0;
@@ -456,6 +467,24 @@ nav .nav-content ul button:hover {
   font-size: 1.6rem;
   line-height: 2.4rem;
 }
+.pairing-section .pairing-learn-more {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.pairing-section .pairing-learn-more .arrow-more i {
+  padding: 2rem;
+  font-size: 3rem;
+  color: #9795b8;
+  cursor: pointer;
+  animation: moveInBottom 1s;
+  animation-delay: 1s;
+  transition: transform 0.3s;
+}
+.pairing-section .pairing-learn-more .arrow-more i:hover {
+  transform: scale(1.5);
+}
 
 @media (max-width: 768px) {
   .pairing-section {
@@ -486,7 +515,7 @@ nav .nav-content ul button:hover {
 }
 @media (max-width: 576px) {
   .pairing-section {
-    padding-top: 14rem;
+    padding-top: 5rem;
   }
   .pairing-section .pairing-content {
     flex-direction: column;
@@ -514,10 +543,11 @@ nav .nav-content ul button:hover {
 }
 .why-pair-section {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   padding-top: 7rem;
+  min-height: 100vh;
 }
 .why-pair-section .why-content {
   display: flex;
@@ -551,9 +581,37 @@ nav .nav-content ul button:hover {
   font-size: 1.8rem;
   line-height: 2.2rem;
 }
+.why-pair-section .why-learn-more {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.why-pair-section .why-learn-more .arrow-more i {
+  padding: 2rem;
+  font-size: 3rem;
+  color: #9795b8;
+  cursor: pointer;
+  animation: moveInBottom 1s;
+  animation-delay: 1s;
+  transition: transform 0.3s;
+}
+.why-pair-section .why-learn-more .arrow-more i:hover {
+  transform: scale(1.5);
+}
 
+@media (max-width: 768px) {
+  .why-pair-section {
+    padding-top: 5rem;
+  }
+}
+@media (max-width: 576px) {
+  .why-pair-section {
+    padding-top: 7rem;
+  }
+}
 .team-section {
-  padding-top: 10rem;
+  padding: 10rem 0;
 }
 .team-section h4 {
   text-align: center;
@@ -638,6 +696,7 @@ nav .nav-content ul button:hover {
     width: 60%;
     padding: 0rem;
     margin: 1rem;
+    filter: grayscale(0%);
   }
   .team-section .team-content .card .img-name-container .team-title h2 {
     margin: 0.5rem 2rem;
@@ -654,9 +713,13 @@ nav .nav-content ul button:hover {
   .team-section .team-content .card .social a i {
     margin: 1rem;
     width: 50%;
+    font-size: 2rem;
   }
 }
 @media (max-width: 576px) {
+  .team-section {
+    padding-top: 12rem;
+  }
   .team-section .team-content .card {
     flex-direction: column;
     padding: 1rem;
@@ -673,6 +736,10 @@ nav .nav-content ul button:hover {
   .team-section .team-content .card .social {
     flex-direction: row;
     padding: 1rem;
+  }
+  .team-section .team-content .card .social i {
+    padding: 0 1rem;
+    font-size: 2.5rem;
   }
 }
 footer {
