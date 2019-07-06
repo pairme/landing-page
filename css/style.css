@@ -66,7 +66,12 @@ body {
   color: #37346e;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Quicksand", sans-serif;
 }
 
@@ -246,7 +251,7 @@ nav .nav-content ul button:hover {
   align-items: center;
   flex-direction: column;
   min-height: 90vh;
-  margin-top: 7vh;
+  padding-top: 7vh;
 }
 .cta-section h1 {
   font-weight: 700;
@@ -303,6 +308,9 @@ nav .nav-content ul button:hover {
   line-height: 2rem;
   color: #37346e;
 }
+.cta-section .cta-content .cta-left-content .cta-left-bottom-content p a:visited {
+  color: #888888;
+}
 .cta-section .cta-content .cta-right-content {
   display: flex;
   justify-content: center;
@@ -324,12 +332,15 @@ nav .nav-content ul button:hover {
   font-weight: 700;
   text-align: center;
 }
+.cta-section .cta-learn-more .jump-down {
+  animation: moveInBottom 1s;
+}
 .cta-section .cta-learn-more .jump-down i {
   padding: 2rem;
   font-size: 3rem;
   color: #9795b8;
   cursor: pointer;
-  animation: moveInBottom 1s;
+  animation-name: wobble;
   animation-delay: 1s;
   transition: transform 0.3s;
 }
@@ -363,6 +374,9 @@ nav .nav-content ul button:hover {
   }
   .cta-section .cta-content .cta-left-content .cta-left-bottom-content p {
     padding: 0 1rem 1.4rem 0;
+  }
+  .cta-section .cta-content .cta-right-content {
+    margin-right: 0;
   }
   .cta-section .cta-content .cta-right-content img {
     width: 80%;
@@ -413,7 +427,6 @@ nav .nav-content ul button:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  flex-wrap: wrap;
   width: 45%;
   padding: 0 2rem;
 }
@@ -478,7 +491,7 @@ nav .nav-content ul button:hover {
   font-size: 3rem;
   color: #9795b8;
   cursor: pointer;
-  animation: moveInBottom 1s;
+  animation-name: wobble;
   animation-delay: 1s;
   transition: transform 0.3s;
 }
@@ -488,13 +501,13 @@ nav .nav-content ul button:hover {
 
 @media (max-width: 768px) {
   .pairing-section {
-    padding-top: 0rem;
+    padding-top: 4rem;
   }
   .pairing-section .pairing-content {
     flex-direction: column;
   }
   .pairing-section .pairing-content .pairing-left-content {
-    width: 90%;
+    width: 80%;
   }
   .pairing-section .pairing-content .pairing-right-content {
     width: 80%;
@@ -592,7 +605,7 @@ nav .nav-content ul button:hover {
   font-size: 3rem;
   color: #9795b8;
   cursor: pointer;
-  animation: moveInBottom 1s;
+  animation-name: wobble;
   animation-delay: 1s;
   transition: transform 0.3s;
 }
@@ -637,11 +650,11 @@ nav .nav-content ul button:hover {
   transition: transform 0.3s;
 }
 .team-section .team-content .card .img-name-container img {
+  filter: grayscale(50%);
   border-radius: 50%;
   width: 10rem;
   box-shadow: 0 0 8px 4px rgba(151, 149, 184, 0.4);
   margin: 2rem;
-  filter: grayscale(50%);
 }
 .team-section .team-content .card .img-name-container img:hover {
   filter: grayscale(0%);
@@ -692,13 +705,13 @@ nav .nav-content ul button:hover {
     min-height: 0rem;
     width: 94%;
   }
-  .team-section .team-content .card .img-name-container img {
+  .team-section .team-content .card img {
     width: 60%;
     padding: 0rem;
     margin: 1rem;
     filter: grayscale(0%);
   }
-  .team-section .team-content .card .img-name-container .team-title h2 {
+  .team-section .team-content .card .team-title h2 {
     margin: 0.5rem 2rem;
   }
   .team-section .team-content .card p {
@@ -778,33 +791,7 @@ footer p {
     transform: translate(0);
   }
 }
-@-webkit-keyframes hvr-wobble-vert {
-  16.65% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-  33.3% {
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
-  }
-  49.95% {
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
-  }
-  66.6% {
-    -webkit-transform: translateY(-2px);
-    transform: translateY(-2px);
-  }
-  83.25% {
-    -webkit-transform: translateY(1px);
-    transform: translateY(1px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-@keyframes hvr-wobble-vert {
+@keyframes wobble {
   16.65% {
     -webkit-transform: translateY(8px);
     transform: translateY(8px);

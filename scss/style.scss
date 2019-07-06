@@ -92,7 +92,7 @@ ul {
 nav {
   @include flex(center, center);
   background-color: $white;
-  box-shadow: 0 7px 7px -2px rgb($grey, .2);
+  box-shadow: 0 7px 7px -2px rgb($grey, 0.2);
   position: sticky;
   position: -webkit-sticky;
   position: -moz-sticky;
@@ -115,7 +115,7 @@ nav {
     ul {
       @include flex(flex-end, center);
       width: 100%;
-      padding: 0 .5rem;
+      padding: 0 0.5rem;
       li {
         font-weight: 700;
         margin: 0 3%;
@@ -130,8 +130,8 @@ nav {
         margin: 2rem 1.4rem;
         font-size: 1.4rem;
         line-height: 1.4rem;
-        box-shadow: 0 2px 2px 2px rgb($grey, .2);
-        transition: transform .3s;
+        box-shadow: 0 2px 2px 2px rgb($grey, 0.2);
+        transition: transform 0.3s;
       }
       button:hover {
         transform: scale(1.03);
@@ -140,7 +140,7 @@ nav {
   }
 }
 // NAV 768
-@media(max-width: $tablet) {
+@media (max-width: $tablet) {
   nav {
     .nav-content {
       ul {
@@ -153,13 +153,13 @@ nav {
   }
 }
 // NAV 576
-@media(max-width: $mobile) {
+@media (max-width: $mobile) {
   nav {
     .nav-content {
       width: 500px;
       a {
         img {
-          padding-top: .5rem;
+          padding-top: 0.5rem;
         }
       }
       ul {
@@ -167,11 +167,11 @@ nav {
         flex-wrap: wrap;
         li {
           font-size: 1.2rem;
-          padding-bottom: .5rem;
+          padding-bottom: 0.5rem;
         }
         button {
           order: -1;
-          margin: .5rem 0
+          margin: 0.5rem 0;
         }
       }
     }
@@ -183,7 +183,7 @@ nav {
   @include flex(space-between, center);
   flex-direction: column;
   min-height: 90vh;
-  margin-top: 7vh;
+  padding-top: 7vh;
   h1 {
     font-weight: 700;
     text-align: center;
@@ -209,10 +209,10 @@ nav {
           text-transform: uppercase;
           padding: 1.8rem 3rem;
           margin: 2rem 0 1rem 0;
-          box-shadow: 0 2px 2px 2px rgb($grey, .2);
+          box-shadow: 0 2px 2px 2px rgb($grey, 0.2);
           border: none;
           cursor: pointer;
-          transition: transform .3s;
+          transition: transform 0.3s;
         }
         button:hover {
           transform: scale(1.03) translateY(-1.02rem);
@@ -222,7 +222,7 @@ nav {
         @include flex(center, center);
         flex-direction: column;
         p {
-          padding: .5rem 1rem 1.2rem 0;
+          padding: 0.5rem 1rem 1.2rem 0;
           text-align: center;
           font-size: 1.4rem;
           line-height: 1.6rem;
@@ -230,6 +230,9 @@ nav {
             font-size: 1.4rem;
             line-height: 2rem;
             color: $main;
+          }
+          a:visited {
+            color: $grey-neutral;
           }
         }
       }
@@ -252,14 +255,15 @@ nav {
       text-align: center;
     }
     .jump-down {
+      animation: moveInBottom 1s;
       i {
         padding: 2rem;
         font-size: 3rem;
         color: $grey;
         cursor: pointer;
-        animation: moveInBottom 1s;
+        animation-name: wobble;
         animation-delay: 1s;
-        transition: transform .3s;
+        transition: transform 0.3s;
       }
       i:hover {
         transform: scale(1.5);
@@ -268,7 +272,7 @@ nav {
   }
 }
 // CTA 1000px
-@media(max-width: $standard) {
+@media (max-width: $standard) {
   .cta-section {
     h1 {
       font-size: 3.4rem;
@@ -289,7 +293,7 @@ nav {
   }
 }
 // CTA 768px
-@media(max-width: $tablet) {
+@media (max-width: $tablet) {
   .cta-section {
     h1 {
       font-size: 2.6rem;
@@ -305,6 +309,7 @@ nav {
         }
       }
       .cta-right-content {
+        margin-right: 0;
         img {
           width: 80%;
         }
@@ -320,7 +325,7 @@ nav {
   }
 }
 // CTA 576px
-@media(max-width: $mobile) {
+@media (max-width: $mobile) {
   .cta-section {
     h1 {
       padding: 0 2rem;
@@ -354,7 +359,6 @@ nav {
     .pairing-left-content {
       @include flex(center, center);
       flex-direction: column;
-      flex-wrap: wrap;
       width: 45%;
       padding: 0 2rem;
       h4 {
@@ -367,7 +371,7 @@ nav {
         padding: 2rem 0;
       }
       img {
-        width: 70%
+        width: 70%;
       }
     }
     .pairing-right-content {
@@ -416,9 +420,9 @@ nav {
         font-size: 3rem;
         color: $grey;
         cursor: pointer;
-        animation: moveInBottom 1s;
+        animation-name: wobble;
         animation-delay: 1s;
-        transition: transform .3s;
+        transition: transform 0.3s;
       }
       i:hover {
         transform: scale(1.5);
@@ -429,11 +433,12 @@ nav {
 // PAIRING 768px
 @media (max-width: $tablet) {
   .pairing-section {
-    padding-top: 0rem;
+    padding-top: 4rem;
+
     .pairing-content {
       flex-direction: column;
       .pairing-left-content {
-        width: 90%;
+        width: 80%;
       }
       .pairing-right-content {
         width: 80%;
@@ -534,9 +539,9 @@ nav {
         font-size: 3rem;
         color: $grey;
         cursor: pointer;
-        animation: moveInBottom 1s;
+        animation-name: wobble;
         animation-delay: 1s;
-        transition: transform .3s;
+        transition: transform 0.3s;
       }
       i:hover {
         transform: scale(1.5);
@@ -570,20 +575,20 @@ nav {
     .card {
       @include flex(space-between, center);
       flex-direction: column;
-      box-shadow: 0 0 4px 2px rgb($grey, .2);
-      padding: .5rem 1rem;
+      box-shadow: 0 0 4px 2px rgb($grey, 0.2);
+      padding: 0.5rem 1rem;
       margin: 1.2rem;
       min-height: 50rem;
       width: 25%;
       text-align: center;
-      transition: transform .3s;
+      transition: transform 0.3s;
       .img-name-container {
         img {
+          filter: grayscale(50%);
           border-radius: 50%;
           width: 10rem;
-          box-shadow: 0 0 8px 4px rgb($grey, .4);
+          box-shadow: 0 0 8px 4px rgb($grey, 0.4);
           margin: 2rem;
-          filter: grayscale(50%);
         }
         img:hover {
           filter: grayscale(0%);
@@ -601,7 +606,7 @@ nav {
         }
       }
       p {
-        padding: 0 .8rem;
+        padding: 0 0.8rem;
       }
       .social {
         @include flex(center, center);
@@ -622,7 +627,7 @@ nav {
   }
 }
 // TEAM 768
-@media(max-width: $tablet) {
+@media (max-width: $tablet) {
   .team-section {
     .team-content {
       @include flex(space-between, flex-start);
@@ -631,7 +636,7 @@ nav {
       .card {
         @include flex(center, center);
         flex-direction: row;
-        padding: .5rem;
+        padding: 0.5rem;
         margin: 1rem 2rem;
         min-height: 0rem;
         width: 94%;
@@ -644,7 +649,7 @@ nav {
           }
           .team-title {
             h2 {
-              margin: .5rem 2rem;
+              margin: 0.5rem 2rem;
             }
           }
         }
@@ -669,7 +674,7 @@ nav {
   }
 }
 // TEAM 576
-@media(max-width: $mobile) {
+@media (max-width: $mobile) {
   .team-section {
     padding-top: 12rem;
     .team-content {
@@ -731,42 +736,13 @@ footer {
     opacity: 0;
     transform: translateY(3rem);
   }
-
   100% {
     opacity: 1;
     transform: translate(0);
   }
 }
 
-@-webkit-keyframes hvr-wobble-vert {
-  16.65% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-  33.3% {
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
-  }
-  49.95% {
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
-  }
-  66.6% {
-    -webkit-transform: translateY(-2px);
-    transform: translateY(-2px);
-  }
-  83.25% {
-    -webkit-transform: translateY(1px);
-    transform: translateY(1px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-
-@keyframes hvr-wobble-vert {
+@keyframes wobble {
   16.65% {
     -webkit-transform: translateY(8px);
     transform: translateY(8px);
