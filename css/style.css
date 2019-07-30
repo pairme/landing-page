@@ -66,12 +66,7 @@ body {
   color: #37346e;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Quicksand", sans-serif;
 }
 
@@ -334,6 +329,9 @@ nav .nav-content ul button:hover {
 }
 .cta-section .cta-learn-more .jump-down {
   animation: moveInBottom 1s;
+  animation-delay: 1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
 }
 .cta-section .cta-learn-more .jump-down i {
   padding: 2rem;
@@ -342,6 +340,7 @@ nav .nav-content ul button:hover {
   cursor: pointer;
   animation-name: wobble;
   animation-delay: 1s;
+  animation-iteration-count: 5;
   transition: transform 0.3s;
 }
 .cta-section .cta-learn-more .jump-down i:hover {
@@ -705,13 +704,13 @@ nav .nav-content ul button:hover {
     min-height: 0rem;
     width: 94%;
   }
-  .team-section .team-content .card img {
+  .team-section .team-content .card .img-name-container img {
     width: 60%;
     padding: 0rem;
     margin: 1rem;
     filter: grayscale(0%);
   }
-  .team-section .team-content .card .team-title h2 {
+  .team-section .team-content .card .img-name-container .team-title h2 {
     margin: 0.5rem 2rem;
   }
   .team-section .team-content .card p {
