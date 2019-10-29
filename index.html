@@ -1,232 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PairMe | Pair Programming Matchmaker</title>
+    <meta property="og:image" content="./assets/pairme-thumb.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="550" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.pair-me.netlify.com/" />
+    <meta property="og:title" content="Pair Programming Matchmaker" />
+    <meta property="og:description" content="Pair programming matchmaking app built with React, Socket.io." />
+    <link rel="shortcut icon" href="./assets/favicon-green.png" />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <script src="https://kit.fontawesome.com/8aeb8d22ed.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./js/index.js" async></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>PairMe | Pair Programming Matchmaker </title>
-  <link rel="shortcut icon" href="./assets/favicon-green.png" />
-  <link rel="stylesheet" href="./css/style.css" type="text/css" />
-  <script src="https://kit.fontawesome.com/8aeb8d22ed.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-  <script src="./js/index.js" async></script>
-</head>
-
-<body>
-  <!--NAVBAR-->
-  <nav>
-    <div class="nav-content">
-      <div onclick="location.href='/index.html'" class='logo'>
-        <img src="/assets/logo.svg" alt="pairme logo" />
-      </div>
-      <ul>
-        <li><a href="#pairing">HOW&nbsp;IT&nbsp;WORKS</a></li>
-        <li><a href="#why">WHY&nbsp;PAIR</a></li>
-        <li><a href="#team">TEAM</a></li>
-        <a href="https://pairme2.netlify.com/">
-          <button>FIND&nbsp;A&nbsp;PAIR</button>
+  <body>
+    <!--NAVBAR-->
+    <nav>
+      <div class="nav-content">
+        <div onclick="location.href='/index.html'" class="logo">
+          <img src="./assets/logo.svg" alt="pairme logo" />
+        </div>
+        <ul>
+          <li><a href="#pairing">HOW&nbsp;IT&nbsp;WORKS</a></li>
+          <li><a href="#why">WHY&nbsp;PAIR</a></li>
+          <li><a href="#team">TEAM</a></li>
+          <a href="https://pairme2.netlify.com/">
+            <button>FIND&nbsp;A&nbsp;PAIR</button>
           </a>
-      </ul>
+        </ul>
+      </div>
+    </nav>
+
+    <!--CONTAINER-->
+    <div class="container">
+      <!--CTA-->
+      <section class="cta-section">
+        <h1>Start pair programming fast with PairMe</h1>
+        <div class="cta-content">
+          <div class="cta-left-content">
+            <div class="cta-left-top-content">
+              <h5>
+                PairMe allows you to chat and generate a pair programming
+                session over your own video link with a matchmaking queue
+                system.
+              </h5>
+              <h5>
+                We help programmers connect and collaborate from anywhere with
+                an internet connection.
+              </h5>
+            </div>
+            <a href="https://pairme2.netlify.com/">
+              <button>start pairing now</button>
+            </a>
+            <div class="cta-left-bottom-content">
+              <p>Video conference link required*</p>
+              <p>
+                Try Zoom, sign up for a free account
+                <a href="https://zoom.us/signup" target="_blank">here</a>
+              </p>
+            </div>
+          </div>
+          <div class="cta-right-content">
+            <img src="./assets/pairme-laptop-demo.gif" alt="laptop" />
+          </div>
+        </div>
+
+        <div class="cta-learn-more">
+          <h3>Learn more about pair programming</h3>
+          <a class="jump-down" href="#pairing">
+            <i class="fas fa-chevron-down hvr-wobble-vert"></i>
+          </a>
+        </div>
+      </section>
+
+      <!--PAIRING-->
+      <section class="pairing-section" id="pairing">
+        <div class="pairing-content">
+          <div class="pairing-left-content">
+            <h4>What is pair programming?</h4>
+            <p>
+              A method where two programmers work on the same piece of code
+              together at the same.<br /><br />
+              One developer acts as a 'driver' typing out the code while the
+              other acts as a 'navigator' directing the high level approach.
+            </p>
+            <h3>
+              Pairing is about communication, learning, and a common goal.
+            </h3>
+            <img src="./assets/map.svg" alt="map" />
+          </div>
+
+          <div class="pairing-right-content">
+            <img src="./assets/fast_car_p4cu.svg" alt="car" />
+            <h4>How to be a good pair</h4>
+            <ul class="pairing-good-list">
+              <li>Switching every 5-15 minutes</li>
+              <li>Be flexible when choosing tools</li>
+              <li>Ask "Is my pair engaged?"</li>
+              <li>Ask "Am I engaged?"</li>
+              <li>Think out loud</li>
+              <li>Ask if you aren't sure</li>
+              <li>Acknowledge successes</li>
+            </ul>
+            <h5>Define guidelines before pairing:</h5>
+            <ul class="pairing-guidelines">
+              <li>What is the goal or purpose?</li>
+              <li>What tools and/or techniques?</li>
+              <li>How and when to switch roles?</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pairing-learn-more">
+          <a class="arrow-more" href="#why">
+            <i class="fas fa-chevron-down hvr-wobble-vert"></i>
+          </a>
+        </div>
+      </section>
+
+      <!--WHY PAIR-->
+      <section class="why-pair-section" id="why">
+        <div class="why-content">
+          <h4>Why Pair Program?</h4>
+          <div class="why-pair">
+            <div class="why-card">
+              <img src="./assets/connected_world_wuay.svg" alt="world" />
+              <p>Get exposed to someone else's code</p>
+            </div>
+            <div class="why-card">
+              <img src="./assets/developer-woman.svg" alt="woman" />
+              <p>Learn new techniques and tools</p>
+            </div>
+            <div class="why-card">
+              <img src="./assets/bug_fixing_oc7a.svg" alt="computer" />
+              <p>Prevent bugs and write better code</p>
+            </div>
+            <div class="why-card">
+              <img src="./assets/software_engineer_lvl5.svg" alt="engineer" />
+              <p>Get more done in less time</p>
+            </div>
+            <div class="why-card">
+              <img src="./assets/tree_swing_ub4f.svg" alt="tree" />
+              <p>Learn about your pair as teammate</p>
+            </div>
+            <div class="why-card">
+              <img src="./assets/high_five_u364.svg" alt="high-five" />
+              <p>Leave feeling happy and accomplished</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-learn-more">
+          <a class="arrow-more" href="#team">
+            <i class="fas fa-chevron-down hvr-wobble-vert"></i>
+          </a>
+        </div>
+      </section>
+
+      <!--TEAM-->
+      <section class="team-section" id="team">
+        <h4>Our Team</h4>
+        <div class="team-content">
+          <div class="card">
+            <div class="img-name-container">
+              <img src="./assets/carlo.png" alt="carlos" />
+              <div class="team-title">
+                <h2>Carlo Clamucha</h2>
+                <h3>Software Developer</h3>
+              </div>
+            </div>
+            <p>
+              I am a web developer residing in Texas, and currently looking for
+              a job in software development/web development. I studied computer
+              science at my local community college for a year and a half before
+              I joined Lambda School. I've recently graduated for the Lambda
+              School web development course.
+            </p>
+            <div class="social">
+              <a href="https://www.github.com/CarloC24/" target="_blank">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/juan-carlo-clamucha-1489b216b/"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin-in fa-lg"></i>
+              </a>
+              <a href="mailto:carlo.clamucha@gmail.com" target="_blank">
+                <i class="far fa-envelope fa-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="img-name-container">
+              <img src="./assets/brad.png" alt="carlos" />
+              <div class="team-title">
+                <h2>Brad Mortensen</h2>
+                <h3>Software Developer</h3>
+              </div>
+            </div>
+            <p>
+              Denver based full-stack software developer, specializing in
+              Javascript (React, Vue, Node.js) but I'm excited to learn other
+              tools. I'm passionate about building robust applications through
+              clean and well-tested code. Currently working as a computer
+              science teaching assistant at Lambda School.
+            </p>
+            <div class="social">
+              <a href="https://www.github.com/brad-mortensen" target="_blank">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/bradmmortensen/"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin-in fa-lg"></i>
+              </a>
+              <a href="mailto:bradmmortensen@gmail.com" target="_blank">
+                <i class="far fa-envelope fa-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="img-name-container">
+              <img src="./assets/kristin.png" alt="kristin" />
+              <div class="team-title">
+                <h2>Kristin Barr</h2>
+                <h3>Software Developer</h3>
+              </div>
+            </div>
+            <p>
+              I’m a web developer based in NYC with a passion for visual design.
+              I aim to be part of a team building impactful products. I’m also a
+              podcast and meetup junkie, enjoy biking, photography, and sewing.
+              I love learning and meeting new people. Ask me about what I’m
+              working on!
+            </p>
+            <div class="social">
+              <a href="https://github.com/Kristinbarr" target="_blank">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/kristinbarr/"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin-in fa-lg"></i>
+              </a>
+              <a href="mailto:kristinbarr@gmail.com" target="_blank">
+                <i class="far fa-envelope fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  </nav>
-
-  <!--CONTAINER-->
-  <div class="container">
-
-    <!--CTA-->
-    <section class="cta-section">
-      <h1>Start pair programming fast with PairMe</h1>
-      <div class="cta-content">
-        <div class="cta-left-content">
-          <div class="cta-left-top-content">
-
-            <h5>PairMe allows you to chat and generate a pair programming session over your own video link with a matchmaking queue system.</h5>
-            <h5>We help programmers connect and collaborate from anywhere with an internet connection.</h5>
-          </div>
-          <a href='https://pairme2.netlify.com/' >
-            <button>start pairing now</button>
-          </a>
-          <div class="cta-left-bottom-content">
-            <p>Video conference link required*</p>
-            <p>Try Zoom, sign up for a free account <a href="https://zoom.us/signup" target="_blank">here</a></p>
-          </div>
-        </div>
-        <div class="cta-right-content">
-          <img src="./assets/pairme-laptop-demo.gif" alt="laptop">
-        </div>
-      </div>
-
-      <div class="cta-learn-more">
-        <h3>Learn more about pair programming</h3>
-        <a class="jump-down" href="#pairing">
-          <i class="fas fa-chevron-down hvr-wobble-vert"></i>
-        </a>
-      </div>
-    </section>
-
-    <!--PAIRING-->
-    <section class="pairing-section" id="pairing">
-      <div class="pairing-content">
-
-        <div class="pairing-left-content">
-          <h4>What is pair programming?</h4>
-          <p>A method where two programmers work on the same piece of code together at the same.<br><br>
-          One developer acts as a 'driver' typing out the code while the other acts as a 'navigator' directing the high level approach.</p>
-          <h3>Pairing is about communication, learning, and a common goal.</h3>
-          <img src="./assets/map.svg" alt="map">
-        </div>
-
-        <div class="pairing-right-content">
-          <img src="./assets/fast_car_p4cu.svg" alt="car">
-          <h4>How to be a good pair</h4>
-          <ul class="pairing-good-list">
-            <li>Switching every 5-15 minutes</li>
-            <li>Be flexible when choosing tools</li>
-            <li>Ask "Is my pair engaged?"</li>
-            <li>Ask "Am I engaged?"</li>
-            <li>Think out loud</li>
-            <li>Ask if you aren't sure</li>
-            <li>Acknowledge successes</li>
-          </ul>
-          <h5>Define guidelines before pairing:</h5>
-          <ul class="pairing-guidelines">
-            <li>What is the goal or purpose?</li>
-            <li>What tools and/or techniques?</li>
-            <li>How and when to switch roles?</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pairing-learn-more">
-        <a class="arrow-more" href="#why">
-          <i class="fas fa-chevron-down hvr-wobble-vert" ></i>
-        </a>
-      </div>
-
-    </section>
-
-    <!--WHY PAIR-->
-    <section class="why-pair-section" id="why">
-      <div class="why-content">
-        <h4>Why Pair Program?</h4>
-        <div class="why-pair">
-          <div class="why-card">
-            <img src="./assets/connected_world_wuay.svg" alt="world">
-            <p>Get exposed to someone else's code</p>
-          </div>
-          <div class="why-card">
-            <img src="./assets/developer-woman.svg" alt="woman">
-            <p>Learn new techniques and tools</p>
-          </div>
-          <div class="why-card">
-            <img src="./assets/bug_fixing_oc7a.svg" alt="computer">
-            <p>Prevent bugs and write better code</p>
-          </div>
-          <div class="why-card">
-            <img src="./assets/software_engineer_lvl5.svg" alt="engineer">
-            <p>Get more done in less time</p>
-          </div>
-          <div class="why-card">
-            <img src="./assets/tree_swing_ub4f.svg" alt="tree">
-            <p>Learn about your pair as teammate</p>
-          </div>
-          <div class="why-card">
-            <img src="./assets/high_five_u364.svg" alt="high-five">
-            <p>Leave feeling happy and accomplished</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="why-learn-more">
-        <a class="arrow-more" href="#team">
-          <i class="fas fa-chevron-down hvr-wobble-vert" ></i>
-        </a>
-      </div>
-    </section>
-
-    <!--TEAM-->
-    <section class="team-section" id="team">
-
-      <h4>Our Team</h4>
-      <div class='team-content'>
-
-        <div class='card'>
-          <div class='img-name-container'>
-            <img src="./assets/carlo.png" alt="carlos">
-            <div class="team-title">
-              <h2>Carlo Clamucha</h2>
-              <h3>Software Developer</h3>
-            </div>
-          </div>
-          <p>I am a web developer residing in Texas, and currently looking for a job in software development/web development. I studied computer science at my local community college for a year and a half before I joined Lambda School. I've recently graduated for the Lambda School web development course.</p>
-          <div class="social">
-            <a href="https://www.github.com/CarloC24/" target="_blank">
-              <i class="fab fa-github fa-lg"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/juan-carlo-clamucha-1489b216b/" target="_blank">
-              <i class="fab fa-linkedin-in fa-lg"></i>
-            </a>
-            <a href='mailto:carlo.clamucha@gmail.com' target="_blank">
-              <i class="far fa-envelope fa-lg"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class='card'>
-          <div class='img-name-container'>
-            <img src="./assets/brad.png" alt="carlos">
-            <div class="team-title">
-              <h2>Brad Mortensen</h2>
-              <h3>Software Developer</h3>
-            </div>
-          </div>
-          <p>Denver based full-stack software developer, specializing in Javascript (React, Vue, Node.js) but I'm excited to learn other tools. I'm passionate about building robust applications through clean and well-tested code. Currently working as a computer science teaching assistant at Lambda School.</p>
-          <div class="social">
-            <a href='https://www.github.com/brad-mortensen' target="_blank">
-              <i class="fab fa-github fa-lg"></i>
-            </a>
-            <a href='https://www.linkedin.com/in/bradmmortensen/' target="_blank">
-              <i class="fab fa-linkedin-in fa-lg"></i>
-            </a>
-            <a href='mailto:bradmmortensen@gmail.com' target="_blank">
-              <i class="far fa-envelope fa-lg" ></i>
-            </a>
-          </div>
-        </div>
-
-        <div class='card'>
-          <div class='img-name-container'>
-            <img src="./assets/kristin.png" alt="kristin">
-            <div class="team-title">
-              <h2>Kristin Barr</h2>
-              <h3>Software Developer</h3>
-            </div>
-          </div>
-          <p>I’m a web developer based in NYC with a passion for visual design. I aim to be part of a team building impactful products. I’m also a podcast and meetup junkie, enjoy biking, photography, and sewing. I love learning and meeting new people. Ask me about what I’m working on!</p>
-          <div class="social">
-            <a href='https://github.com/Kristinbarr' target="_blank">
-              <i class="fab fa-github fa-lg"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/kristinbarr/" target="_blank">
-              <i class="fab fa-linkedin-in fa-lg"></i>
-            </a>
-            <a href='mailto:kristinbarr@gmail.com' target="_blank">
-              <i class="far fa-envelope fa-lg"></i>
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
-  </div>
-  <!-- container -->
-  <footer>
-    <p>© Copyright 2019</p>
-  </footer>
-
-</body>
-
+    <!-- container -->
+    <footer>
+      <p>© Copyright 2019</p>
+    </footer>
+  </body>
 </html>
