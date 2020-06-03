@@ -397,6 +397,9 @@ nav .nav-content ul button:hover {
   .cta-section .cta-content .cta-left-content .cta-left-top-content {
     padding-left: 0;
   }
+  .cta-section .cta-content .cta-left-content .cta-left-top-content h5 {
+    font-size: 2rem;
+  }
   .cta-section .cta-content .cta-right-content {
     display: flex;
     justify-content: center;
@@ -409,7 +412,7 @@ nav .nav-content ul button:hover {
 }
 .pairing-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   padding-top: 7rem;
@@ -535,8 +538,12 @@ nav .nav-content ul button:hover {
   .pairing-section .pairing-content .pairing-left-content {
     width: 100%;
   }
+  .pairing-section .pairing-content .pairing-left-content p {
+    font-size: 2rem;
+  }
   .pairing-section .pairing-content .pairing-right-content {
     margin: 0;
+    padding: 0 1rem;
     width: 100%;
   }
   .pairing-section .pairing-content .pairing-right-content img {
@@ -545,17 +552,20 @@ nav .nav-content ul button:hover {
   }
   .pairing-section .pairing-content .pairing-right-content .pairing-good-list li {
     margin-left: 2rem;
+    font-size: 2rem;
   }
   .pairing-section .pairing-content .pairing-right-content h5 {
     padding: 6rem 0 1rem 0;
+    font-size: 2.5rem;
   }
   .pairing-section .pairing-content .pairing-right-content .pairing-guidelines li {
     margin-left: 0rem;
+    font-size: 2rem;
   }
 }
 .why-pair-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   padding-top: 7rem;
