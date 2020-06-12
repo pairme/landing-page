@@ -371,8 +371,12 @@ nav .nav-content ul button:hover {
   .cta-section .cta-content .cta-left-content {
     max-width: 90%;
   }
+  .cta-section .cta-content .cta-left-content .cta-left-top-content h5 {
+    font-size: 2rem;
+  }
   .cta-section .cta-content .cta-left-content .cta-left-bottom-content p {
-    padding: 0 1rem 1.4rem 0;
+    padding: 0.5rem 1rem 1.4rem 0;
+    font-size: 1.6rem;
   }
   .cta-section .cta-content .cta-right-content {
     margin-right: 0;
@@ -511,6 +515,10 @@ nav .nav-content ul button:hover {
   .pairing-section .pairing-content .pairing-left-content {
     width: 80%;
   }
+  .pairing-section .pairing-content .pairing-left-content p {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
   .pairing-section .pairing-content .pairing-right-content {
     width: 80%;
   }
@@ -519,40 +527,8 @@ nav .nav-content ul button:hover {
     order: 5;
   }
   .pairing-section .pairing-content .pairing-right-content .pairing-good-list li {
-    margin-left: 2rem;
-  }
-  .pairing-section .pairing-content .pairing-right-content h5 {
-    padding: 6rem 0 1rem 0;
-  }
-  .pairing-section .pairing-content .pairing-right-content .pairing-guidelines li {
-    margin-left: 0rem;
-  }
-}
-@media (max-width: 576px) {
-  .pairing-section {
-    padding-top: 5rem;
-  }
-  .pairing-section .pairing-content {
-    flex-direction: column;
-  }
-  .pairing-section .pairing-content .pairing-left-content {
-    width: 100%;
-  }
-  .pairing-section .pairing-content .pairing-left-content p {
     font-size: 2rem;
-  }
-  .pairing-section .pairing-content .pairing-right-content {
-    margin: 0;
-    padding: 0 1rem;
-    width: 100%;
-  }
-  .pairing-section .pairing-content .pairing-right-content img {
-    width: 90%;
-    order: 5;
-  }
-  .pairing-section .pairing-content .pairing-right-content .pairing-good-list li {
     margin-left: 2rem;
-    font-size: 2rem;
   }
   .pairing-section .pairing-content .pairing-right-content h5 {
     padding: 6rem 0 1rem 0;
@@ -561,6 +537,19 @@ nav .nav-content ul button:hover {
   .pairing-section .pairing-content .pairing-right-content .pairing-guidelines li {
     margin-left: 0rem;
     font-size: 2rem;
+  }
+}
+@media (max-width: 576px) {
+  .pairing-section {
+    padding-top: 5rem;
+  }
+  .pairing-section .pairing-content .pairing-left-content {
+    width: 100%;
+  }
+  .pairing-section .pairing-content .pairing-right-content {
+    margin: 0;
+    padding: 0 1rem;
+    width: 100%;
   }
 }
 .why-pair-section {
@@ -727,6 +716,8 @@ nav .nav-content ul button:hover {
     padding: 1rem;
     margin: 1rem;
     width: 70%;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
   }
   .team-section .team-content .card .social {
     flex-direction: column;
@@ -735,7 +726,7 @@ nav .nav-content ul button:hover {
   .team-section .team-content .card .social a i {
     margin: 1rem;
     width: 50%;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 @media (max-width: 576px) {
@@ -761,7 +752,7 @@ nav .nav-content ul button:hover {
   }
   .team-section .team-content .card .social i {
     padding: 0 1rem;
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 }
 footer {
